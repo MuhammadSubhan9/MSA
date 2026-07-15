@@ -1,0 +1,467 @@
+/* ==========================================================
+                CERTIFICATION PAGE
+========================================================== */
+
+
+.cert-hero{
+
+    padding-top:180px;
+    padding-bottom:90px;
+    text-align:center;
+
+}
+
+
+.cert-hero h1{
+
+    font-size:72px;
+    font-weight:800;
+    margin:20px 0;
+
+}
+
+
+
+.cert-hero p{
+
+    color:#B8BCC8;
+    font-size:20px;
+    width:min(700px,90%);
+    margin:auto;
+    line-height:1.8;
+
+}
+
+
+
+
+/* Certification Cards */
+
+.cert-grid{
+
+    width:min(1200px,90%);
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(2,1fr);
+
+    gap:35px;
+
+    padding-bottom:150px;
+
+}
+
+
+
+.cert-card{
+
+    padding:35px;
+
+    border-radius:28px;
+
+
+    background:
+
+    rgba(255,255,255,.06);
+
+
+    border:
+
+    1px solid rgba(255,255,255,.12);
+
+
+    backdrop-filter:blur(18px);
+
+
+    transition:.45s;
+
+
+}
+
+
+
+.cert-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:#22C55E;
+
+
+    box-shadow:
+
+    0 0 40px rgba(34,197,94,.18);
+
+}
+
+
+
+
+.cert-icon{
+
+    font-size:45px;
+
+    margin-bottom:25px;
+
+
+    filter:
+
+    drop-shadow(
+    0 0 15px rgba(34,197,94,.4)
+    );
+
+}
+
+
+
+
+.cert-card h2{
+
+    font-size:30px;
+
+    margin-bottom:18px;
+
+
+    background:
+
+    linear-gradient(
+        90deg,
+        white,
+        #60A5FA
+    );
+
+
+    -webkit-background-clip:text;
+
+    color:transparent;
+
+}
+
+
+
+
+.cert-card p{
+
+    color:#AAB2C0;
+
+    font-size:17px;
+
+    line-height:1.8;
+
+}
+
+
+
+
+.cert-info{
+
+    margin-top:25px;
+
+    padding-top:20px;
+
+    border-top:
+
+    1px solid rgba(255,255,255,.12);
+
+
+    color:#D5D8E2;
+
+    line-height:1.9;
+
+}
+
+
+
+
+
+.cert-buttons{
+
+    display:flex;
+
+    gap:15px;
+
+    margin-top:30px;
+
+    flex-wrap:wrap;
+
+}
+
+
+
+
+.cert-buttons a{
+
+    text-decoration:none;
+
+    padding:20px 60px;
+
+    border-radius:999px;
+
+    background:#22C55E;
+
+    color:white;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    display:inline-flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    min-width:220px;
+
+    transition:.3s;
+
+}
+
+
+
+.cert-buttons a:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+
+    0 0 20px rgba(34,197,94,.35);
+
+}
+
+
+
+
+/* Mobile */
+
+@media(max-width:950px){
+
+
+.cert-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+
+.cert-hero h1{
+
+    font-size:48px;
+
+}
+
+
+}
+/* ==========================================================
+                AVIATION FOCUS BADGE
+========================================================== */
+
+
+.cert-focus{
+
+    width:min(700px,90%);
+
+    margin:0 auto 70px;
+
+    padding:25px 35px;
+
+    text-align:center;
+
+    border-radius:25px;
+
+
+    background:
+
+    rgba(34,197,94,.08);
+
+
+    border:
+
+    1px solid rgba(34,197,94,.25);
+
+
+    backdrop-filter:blur(15px);
+
+}
+
+
+
+.cert-focus span{
+
+    display:inline-block;
+
+    font-size:22px;
+
+    font-weight:700;
+
+    color:#65F3A5;
+
+    margin-bottom:12px;
+
+}
+
+
+
+.cert-focus p{
+
+    color:#B8BCC8;
+
+    font-size:16px;
+
+    line-height:1.7;
+
+    margin:0;
+
+}
+/* ==========================================================
+                EXPERIENCES
+========================================================== */
+
+
+.experience-section{
+
+    width:min(1200px,90%);
+
+    margin:100px auto 150px;
+
+}
+
+
+
+.experience-title{
+
+    text-align:center;
+
+    margin-bottom:70px;
+
+}
+
+
+
+.experience-title h1{
+
+    font-size:60px;
+
+    margin:20px 0;
+
+}
+
+
+
+.experience-title p:not(.tag){
+
+    color:#B8BCC8;
+
+    font-size:18px;
+
+    line-height:1.8;
+
+}
+
+
+
+.experience-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:30px;
+
+}
+
+
+
+.experience-card{
+
+    padding:35px;
+
+    border-radius:28px;
+
+    background:
+    rgba(255,255,255,.06);
+
+    border:
+    1px solid rgba(255,255,255,.12);
+
+    backdrop-filter:blur(18px);
+
+    transition:.45s;
+
+}
+
+
+
+.experience-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:#3B82F6;
+
+}
+
+
+
+.experience-icon{
+
+    font-size:45px;
+
+    margin-bottom:25px;
+
+}
+
+
+
+.experience-card h2{
+
+    font-size:26px;
+
+    margin-bottom:15px;
+
+}
+
+
+
+.experience-card p{
+
+    color:#AAB2C0;
+
+    line-height:1.8;
+
+}
+
+
+
+.experience-card span{
+
+    display:inline-block;
+
+    margin-top:20px;
+
+    color:#65F3A5;
+
+    font-size:14px;
+
+}
+
+
+
+@media(max-width:950px){
+
+    .experience-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .experience-title h1{
+
+        font-size:45px;
+
+    }
+
+}
