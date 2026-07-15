@@ -2305,18 +2305,39 @@ footer{
 
 .hero-subtitle{
 
-    font-size:28px;
+    margin-top:22px;
+
+    font-size:24px;
+
+    color:#CBD5E1;
+
+    max-width:780px;
+
+    margin-left:auto;
+
+    margin-right:auto;
+
+    line-height:1.7;
 
     font-weight:400;
 
-    color:#D1D5DB;
+    letter-spacing:.3px;
 
-    margin-top:18px;
+}
+.hero-subtitle::after{
 
-    line-height:1.5;
+    content:"";
 
-    max-width:850px;
+    display:block;
 
-    text-align:center;
+    width:90px;
+
+    height:3px;
+
+    margin:18px auto 0;
+
+    border-radius:999px;
+
+    background:#3B82F6;
 
 }
