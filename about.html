@@ -62,9 +62,142 @@ Muhammad Subhan
 <section class="about-page">
 
 
-<div class="about-image">
+<!-- =========================================
+     SIGNATURE IDENTITY PORTRAIT
+========================================== -->
+<div class="about-image identity-portrait">
 
-    <img src="images/ProfileP.jpeg" alt="Muhammad Subhan">
+    <div class="identity-portrait-frame">
+
+        <img
+            src="images/ProfileP.jpeg"
+            alt="Portrait of Muhammad Subhan"
+        >
+
+
+        <div
+            class="identity-portrait-grid"
+            aria-hidden="true"
+        ></div>
+
+
+        <div class="identity-portrait-status">
+
+            <span aria-hidden="true"></span>
+
+            ACTIVE JOURNEY
+
+        </div>
+
+
+        <div class="identity-portrait-index">
+
+            <span>
+                MSA
+            </span>
+
+            <strong>
+                PROFILE / 01
+            </strong>
+
+        </div>
+
+
+        <div class="identity-portrait-coordinate">
+
+            <span>
+                24.7136° N
+            </span>
+
+            <span>
+                46.6753° E
+            </span>
+
+        </div>
+
+
+        <div class="identity-portrait-nameplate">
+
+            <p>
+                ASPIRING COMMERCIAL PILOT
+            </p>
+
+            <h2>
+                Muhammad Subhan
+            </h2>
+
+            <div>
+
+                <span>
+                    Riyadh, Saudi Arabia
+                </span>
+
+                <span>
+                    2026
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div
+            class="identity-portrait-scan"
+            aria-hidden="true"
+        ></div>
+
+
+        <span
+            class="identity-corner identity-corner-top-left"
+            aria-hidden="true"
+        ></span>
+
+        <span
+            class="identity-corner identity-corner-top-right"
+            aria-hidden="true"
+        ></span>
+
+        <span
+            class="identity-corner identity-corner-bottom-left"
+            aria-hidden="true"
+        ></span>
+
+        <span
+            class="identity-corner identity-corner-bottom-right"
+            aria-hidden="true"
+        ></span>
+
+    </div>
+
+
+    <div class="identity-portrait-caption">
+
+        <div>
+
+            <span>
+                CURRENT FOCUS
+            </span>
+
+            <strong>
+                Aviation Education
+            </strong>
+
+        </div>
+
+
+        <div>
+
+            <span>
+                STATUS
+            </span>
+
+            <strong>
+                Progressing
+            </strong>
+
+        </div>
+
+    </div>
 
 </div>
 
@@ -102,9 +235,77 @@ Muhammad Subhan
 
 </section>
 
+
+<!-- =========================================
+     ABOUT PAGE READING MODE
+========================================== -->
+<section
+    class="about-reading-mode"
+    aria-labelledby="aboutReadingTitle"
+>
+
+    <div class="about-reading-copy">
+
+        <p class="about-reading-eyebrow">
+            CHOOSE YOUR READING EXPERIENCE
+        </p>
+
+        <h2 id="aboutReadingTitle">
+            The short version or the complete story?
+        </h2>
+
+        <p id="aboutReadingDescription">
+            Full Story is currently showing the complete narrative.
+        </p>
+
+    </div>
+
+
+    <div
+        class="about-reading-controls"
+        role="group"
+        aria-label="Choose how much information to display"
+    >
+
+        <button
+            type="button"
+            data-about-reading="scan"
+            aria-pressed="false"
+        >
+            <span aria-hidden="true">⌁</span>
+
+            <span>
+                <strong>Quick Scan</strong>
+                <small>Essential points only</small>
+            </span>
+        </button>
+
+
+        <button
+            type="button"
+            data-about-reading="full"
+            aria-pressed="true"
+        >
+            <span aria-hidden="true">≡</span>
+
+            <span>
+                <strong>Full Story</strong>
+                <small>Complete narrative</small>
+            </span>
+        </button>
+
+    </div>
+
+</section>
+
+
 <section class="about-details">
 
-    <article class="about-section">
+    <article
+    class="about-section"
+    id="about-aviation"
+    data-story-chapter="Why Aviation?"
+>
 
         <div class="about-section-number">
             01
@@ -173,7 +374,11 @@ Muhammad Subhan
 
 
 
-    <article class="about-section">
+    <article
+    class="about-section"
+    id="about-thinking"
+    data-story-chapter="How I Think"
+>
 
         <div class="about-section-number">
             02
@@ -211,7 +416,11 @@ Muhammad Subhan
 
 
 
-    <article class="about-section">
+    <article
+    class="about-section"
+    id="about-learning"
+    data-story-chapter="Continuous Learning"
+>
 
         <div class="about-section-number">
             03
@@ -257,7 +466,11 @@ Muhammad Subhan
 
 
 
-    <article class="about-section">
+    <article
+    class="about-section"
+    id="about-professional"
+    data-story-chapter="Professional Direction"
+>
 
         <div class="about-section-number">
             04
@@ -295,7 +508,11 @@ Muhammad Subhan
 
 
 
-    <article class="about-section">
+    <article
+    class="about-section"
+    id="about-future"
+    data-story-chapter="Looking Ahead"
+>
 
         <div class="about-section-number">
             05
@@ -343,7 +560,11 @@ Muhammad Subhan
 
 
 
-    <article class="about-section">
+    <article
+    class="about-section"
+    id="about-website"
+    data-story-chapter="Why This Website Exists"
+>
 
         <div class="about-section-number">
             06
@@ -474,22 +695,311 @@ Muhammad Subhan
 
 </div>
 
-<button class="back-to-top" aria-label="Back to top">
-    ↑
+<button
+    class="back-to-top progress-return"
+    type="button"
+    aria-label="Back to top — 0% through page"
+    data-progress-return
+>
+    <svg
+        class="progress-return__ring"
+        viewBox="0 0 48 48"
+        aria-hidden="true"
+    >
+        <circle
+            class="progress-return__track"
+            cx="24"
+            cy="24"
+            r="21"
+        ></circle>
+
+        <circle
+            class="progress-return__value"
+            cx="24"
+            cy="24"
+            r="21"
+        ></circle>
+    </svg>
+
+    <span class="progress-return__arrow" aria-hidden="true">
+        ↑
+    </span>
+
+    <span class="progress-return__percentage" aria-hidden="true">
+        0%
+    </span>
 </button>
 
 <script src="js/script.js"></script>
 <script src="js/about.js"></script>
+<script src="js/scroll-return.js"></script>
 
-<footer>
+<!-- =========================================
+     PROFESSIONAL SITE FOOTER
+========================================== -->
+<footer class="site-footer">
 
-    <p>
-        © 2026 Muhammad Subhan
-    </p>
+    <div class="site-footer-inner">
 
-    <p>
-        Built with HTML, CSS & JavaScript
-    </p>
+        <!-- PRIMARY FOOTER INFORMATION -->
+
+        <div class="site-footer-main">
+
+            <div class="site-footer-brand">
+
+                <a
+                    href="index.html"
+                    class="site-footer-identity"
+                    aria-label="Muhammad Subhan homepage"
+                >
+
+                    <span class="site-footer-monogram">
+                        MS
+                    </span>
+
+
+                    <span>
+
+                        <strong>
+                            Muhammad Subhan
+                        </strong>
+
+                        <small>
+                            Personal Portfolio
+                        </small>
+
+                    </span>
+
+                </a>
+
+
+                <p>
+                    An aspiring commercial pilot documenting an
+                    evolving journey through education, aviation,
+                    technology and continuous development.
+                </p>
+
+
+                <div class="site-footer-location">
+
+                    <span aria-hidden="true"></span>
+
+                    Based in Riyadh, Saudi Arabia
+
+                </div>
+
+            </div>
+
+
+            <!-- FOOTER NAVIGATION -->
+
+            <nav
+                class="site-footer-navigation"
+                aria-label="Footer navigation"
+            >
+
+                <div>
+
+                    <p>
+                        EXPLORE
+                    </p>
+
+                    <a href="about.html">
+                        About Me
+                    </a>
+
+                    <a href="timeline.html">
+                        Journey
+                    </a>
+
+                    <a href="skills.html">
+                        Skills
+                    </a>
+
+                </div>
+
+
+                <div>
+
+                    <p>
+                        EVIDENCE
+                    </p>
+
+                    <a href="certification.html">
+                        Certifications
+                    </a>
+
+                    <a href="certification.html#experiences">
+                        Experiences
+                    </a>
+
+                    <a href="contact.html">
+                        Contact
+                    </a>
+
+                </div>
+
+
+                <div>
+
+                    <p>
+                        CONNECT
+                    </p>
+
+                    <a href="mailto:subhan.ahmadbaqa@gmail.com">
+                        Email
+                    </a>
+
+                    <a
+                        href="https://www.linkedin.com/in/ms910"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        LinkedIn
+
+                        <span aria-hidden="true">
+                            ↗
+                        </span>
+
+                    </a>
+
+                </div>
+
+            </nav>
+
+
+            <!-- CURRENT STATUS -->
+
+            <aside
+                class="site-footer-status"
+                aria-label="Current portfolio status"
+            >
+
+                <div class="site-footer-status-heading">
+
+                    <span aria-hidden="true"></span>
+
+                    CURRENTLY PROGRESSING
+
+                </div>
+
+
+                <h2>
+                    Preparing for the next academic stage
+                </h2>
+
+
+                <p>
+                    IGCSE examinations completed. The next checkpoint
+                    is Grade 11, with a long-term direction toward
+                    professional aviation.
+                </p>
+
+
+                <dl>
+
+                    <div>
+
+                        <dt>
+                            Current stage
+                        </dt>
+
+                        <dd>
+                            IGCSE Complete
+                        </dd>
+
+                    </div>
+
+
+                    <div>
+
+                        <dt>
+                            Next checkpoint
+                        </dt>
+
+                        <dd>
+                            Grade 11
+                        </dd>
+
+                    </div>
+
+
+                    <div>
+
+                        <dt>
+                            Direction
+                        </dt>
+
+                        <dd>
+                            Commercial Aviation
+                        </dd>
+
+                    </div>
+
+                </dl>
+
+            </aside>
+
+        </div>
+
+
+        <!-- CONTACT HANDOFF -->
+
+        <div class="site-footer-handoff">
+
+            <div>
+
+                <p>
+                    RELEVANT OPPORTUNITY OR CONVERSATION?
+                </p>
+
+                <h2>
+                    Let’s start with the right context.
+                </h2>
+
+            </div>
+
+
+            <a href="contact.html">
+
+                <span>
+                    Prepare a message
+                </span>
+
+                <span aria-hidden="true">
+                    →
+                </span>
+
+            </a>
+
+        </div>
+
+
+        <!-- LEGAL / META ROW -->
+
+        <div class="site-footer-bottom">
+
+            <p>
+                © 2026 Muhammad Subhan
+            </p>
+
+
+            <p>
+                Designed and built as an evolving personal portfolio
+            </p>
+
+
+            <p>
+
+                <span aria-hidden="true"></span>
+
+                Last reviewed July 2026
+
+            </p>
+
+        </div>
+
+    </div>
 
 </footer>
 
