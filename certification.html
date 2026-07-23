@@ -6,6 +6,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<script>
+    try {
+        if (sessionStorage.getItem("msa-welcome-seen") === "true") {
+            document.documentElement.classList.add("welcome-already-seen");
+        }
+    } catch (error) {
+        /* Continue normally if storage is unavailable. */
+    }
+</script>
 
 
 <title>Certifications | Muhammad Subhan</title>
@@ -17,6 +26,127 @@
 
 
 <body>
+
+    <nav
+    class="section-constellation"
+    id="sectionConstellation"
+    aria-label="Page sections"
+    style="
+        position: fixed !important;
+        left: auto !important;
+        right: 32px !important;
+        top: 50% !important;
+        width: 12px !important;
+        min-width: 12px !important;
+        max-width: 12px !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        transform: translateY(-50%) !important;
+    "
+></nav>
+
+<!-- =========================================
+     FIRST-VISIT CINEMATIC WELCOME
+========================================== -->
+<section
+    class="cinematic-welcome"
+    id="cinematicWelcome"
+    aria-label="Welcome introduction"
+>
+    <div
+        class="cinematic-welcome__atmosphere"
+        aria-hidden="true"
+    >
+        <div class="cinematic-welcome__glow"></div>
+        <div class="cinematic-welcome__grid"></div>
+        <div class="cinematic-welcome__grain"></div>
+
+        <span class="cinematic-welcome__flight-line"></span>
+        <span class="cinematic-welcome__flight-dot"></span>
+    </div>
+
+    <button
+        class="cinematic-welcome__skip"
+        id="cinematicWelcomeSkip"
+        type="button"
+        aria-label="Skip welcome introduction"
+    >
+        Skip intro
+    </button>
+
+    <div
+    class="cinematic-welcome__atmosphere"
+    aria-hidden="true"
+>
+    <div class="cinematic-welcome__glow"></div>
+    <div class="cinematic-welcome__grid"></div>
+    <div class="cinematic-welcome__grain"></div>
+
+    <span class="cinematic-welcome__flight-line"></span>
+    <span class="cinematic-welcome__flight-dot"></span>
+</div>
+
+<button
+    class="cinematic-welcome__skip"
+    id="cinematicWelcomeSkip"
+    type="button"
+    aria-label="Skip welcome introduction"
+    onclick="
+        const welcome = this.closest('.cinematic-welcome');
+        welcome.classList.add('is-leaving');
+        sessionStorage.setItem('msa-welcome-seen', 'true');
+        document.body.classList.remove('cinematic-welcome-active');
+
+        setTimeout(() => {
+            document.documentElement.classList.add('welcome-already-seen');
+            welcome.remove();
+        }, 1400);
+    "
+>
+    Skip intro
+</button>
+
+<div class="cinematic-welcome__content">
+
+    <div class="cinematic-welcome__content">
+
+        <p class="cinematic-welcome__opening">
+            Every journey begins long before takeoff.
+        </p>
+
+        <div class="cinematic-welcome__identity">
+
+            <p class="cinematic-welcome__eyebrow">
+                THE JOURNEY OF
+            </p>
+
+            <h1>
+                <span>Muhammad</span>
+                <span>Subhan</span>
+            </h1>
+
+        </div>
+
+        <p class="cinematic-welcome__fields">
+            Aviation
+            <span aria-hidden="true">•</span>
+            Technology
+            <span aria-hidden="true">•</span>
+            Purpose
+        </p>
+
+        <p class="cinematic-welcome__closing">
+            This is the story of where I am going.
+        </p>
+
+    </div>
+
+    <div
+        class="cinematic-welcome__exit"
+        aria-hidden="true"
+    ></div>
+</section>
+
     <div class="custom-cursor"></div>
     <div class="custom-cursor-dot"></div>
 
@@ -1246,6 +1376,23 @@ A collection of certificates, events and experiences gained throughout my academ
 
 </footer>
 
+<!-- Connection Status Indicator -->
+<div
+    class="connection-status"
+    id="connectionStatus"
+    role="status"
+    aria-live="polite"
+    aria-hidden="true"
+>
+    <span
+        class="connection-status__dot"
+        aria-hidden="true"
+    ></span>
+
+    <span id="connectionStatusText">
+        Connection lost
+    </span>
+</div>
 
 </body>
 
