@@ -1,3 +1,199 @@
+/* ==========================================================
+                FIRST-VISIT CINEMATIC WELCOME
+========================================================== */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const welcome =
+        document.getElementById(
+            "cinematicWelcome"
+        );
+
+    const skipButton =
+        document.getElementById(
+            "cinematicWelcomeSkip"
+        );
+
+
+    /*
+    If this tab has already shown the welcome,
+    remove the unused element completely.
+    */
+
+    if(
+        document.documentElement.classList.contains(
+            "welcome-already-seen"
+        )
+    ){
+
+        welcome?.remove();
+        return;
+
+    }
+
+
+    if(!welcome){
+        return;
+    }
+
+
+    document.body.classList.add(
+        "cinematic-welcome-active"
+    );
+
+
+    let hasFinished =
+        false;
+
+    let finishTimer =
+        null;
+
+
+    function rememberWelcome(){
+
+        try{
+
+            sessionStorage.setItem(
+                "msa-welcome-seen",
+                "true"
+            );
+
+        }catch(error){
+
+            /*
+            The welcome still works if storage
+            is unavailable.
+            */
+
+        }
+
+    }
+
+
+    function finishWelcome(){
+
+        if(hasFinished){
+            return;
+        }
+
+
+        hasFinished =
+            true;
+
+        window.clearTimeout(
+            finishTimer
+        );
+
+        rememberWelcome();
+
+
+        welcome.classList.add(
+            "is-leaving"
+        );
+
+
+        window.setTimeout(() => {
+
+            document.body.classList.remove(
+                "cinematic-welcome-active"
+            );
+
+            document.documentElement.classList.add(
+                "welcome-already-seen"
+            );
+
+            welcome.remove();
+
+        }, 1400);
+
+    }
+
+    if(skipButton){
+
+        skipButton.addEventListener(
+            "click",
+            event => {
+    
+                event.preventDefault();
+                event.stopImmediatePropagation();
+    
+                finishWelcome();
+    
+            }
+        );
+    
+    }
+
+
+
+    /*
+    The written sequence lasts about 4.2 seconds,
+    followed by the cinematic curtain exit.
+    */
+
+    finishTimer =
+    window.setTimeout(
+        finishWelcome,
+        6250
+    );
+
+
+    skipButton?.addEventListener("click", event => {
+        event.preventDefault();
+        event.stopPropagation();
+        finishWelcome();
+    });
+
+
+    /*
+    Escape also skips the introduction.
+    */
+
+    document.addEventListener(
+        "keydown",
+        event => {
+
+            if(
+                event.key === "Escape" &&
+                !hasFinished
+            ){
+
+                finishWelcome();
+
+            }
+
+        }
+    );
+
+});
+/* =========================================
+   ADAPTIVE PERFORMANCE MODE
+========================================= */
+
+(() => {
+    "use strict";
+
+    const connection =
+        navigator.connection ||
+        navigator.mozConnection ||
+        navigator.webkitConnection;
+
+    const slowConnection =
+        connection?.effectiveType === "slow-2g" ||
+        connection?.effectiveType === "2g";
+
+    const dataSaving = connection?.saveData === true;
+
+    const lowMemory =
+        typeof navigator.deviceMemory === "number" &&
+        navigator.deviceMemory <= 2;
+
+    if (slowConnection || dataSaving || lowMemory) {
+        document.documentElement.dataset.msaPerformance = "lite";
+    }
+})();
+
+
 const particles = document.querySelector(".particles");
 
 if(particles){
@@ -281,7 +477,7 @@ window.addEventListener("pageshow", () => {
 ========================================================== */
 
 const rippleButtons = document.querySelectorAll(
-    ".btn, button, .nav-btn, .download-btn, .contact-btn"
+    ".btn, button:not(.cinematic-welcome__skip):not(.constellation-item), .nav-btn, .download-btn, .contact-btn"
 );
 
 
@@ -318,7 +514,7 @@ rippleButtons.forEach(button => {
 ========================================================== */
 
 const magneticButtons = document.querySelectorAll(
-    "button:not(.command-centre-trigger):not(.command-centre-result):not(.experience-dialog-close):not(.evidence-node):not([data-evidence-filter])"
+    "button:not(.cinematic-welcome__skip):not(.constellation-item):not(.command-centre-trigger):not(.command-centre-result):not(.experience-dialog-close):not(.evidence-node):not([data-evidence-filter])"
 );
 magneticButtons.forEach(button => {
 
@@ -841,9 +1037,9 @@ if(
     ====================================================== */
 
     const mainNavigation =
-        document.querySelector(
-            "body > nav"
-        );
+    document.querySelector(
+        "body > nav:not(.section-constellation)"
+    );
 
     const mobileMenuButton =
         mainNavigation?.querySelector(
@@ -3133,9 +3329,9 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", () => {
 
     const primaryNavigation =
-        document.querySelector(
-            "body > nav"
-        );
+    document.querySelector(
+        "body > nav:not(.section-constellation)"
+    );
 
     if(!primaryNavigation){
         return;
@@ -3454,5 +3650,492 @@ document.addEventListener("DOMContentLoaded", () => {
         updateMobileMenuState();
 
     }
+
+});
+/* ==========================================================
+                CONNECTION RECOVERY INDICATOR
+========================================================== */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const connectionStatus =
+        document.getElementById("connectionStatus");
+
+    const connectionStatusText =
+        document.getElementById("connectionStatusText");
+
+
+    if(
+        !connectionStatus ||
+        !connectionStatusText
+    ){
+        return;
+    }
+
+
+    let hideTimer = null;
+
+
+    function showConnectionStatus(
+        message,
+        isOnline,
+        hideAutomatically = true
+    ){
+
+        window.clearTimeout(hideTimer);
+
+        connectionStatusText.textContent =
+            message;
+
+        connectionStatus.classList.toggle(
+            "is-online",
+            isOnline
+        );
+
+        connectionStatus.classList.add(
+            "is-visible"
+        );
+
+        connectionStatus.setAttribute(
+            "aria-hidden",
+            "false"
+        );
+
+
+        if(hideAutomatically){
+
+            hideTimer =
+                window.setTimeout(() => {
+
+                    connectionStatus.classList.remove(
+                        "is-visible"
+                    );
+
+                    connectionStatus.setAttribute(
+                        "aria-hidden",
+                        "true"
+                    );
+
+                }, 3000);
+
+        }
+
+    }
+
+
+    window.addEventListener("offline", () => {
+
+        showConnectionStatus(
+            "You are offline",
+            false,
+            false
+        );
+
+    });
+
+
+    window.addEventListener("online", () => {
+
+        showConnectionStatus(
+            "Connection restored",
+            true,
+            true
+        );
+
+    });
+
+
+    if(!navigator.onLine){
+
+        showConnectionStatus(
+            "You are offline",
+            false,
+            false
+        );
+
+    }
+
+});
+/* ==========================================================
+                    EXTERNAL LINK INTELLIGENCE
+========================================================== */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const links =
+        document.querySelectorAll("a[href]");
+
+
+    links.forEach(link => {
+
+        const rawHref =
+            link.getAttribute("href");
+
+
+        if(
+            !rawHref ||
+            rawHref.startsWith("#") ||
+            rawHref.startsWith("mailto:") ||
+            rawHref.startsWith("tel:") ||
+            rawHref.startsWith("javascript:") ||
+            link.hasAttribute("download")
+        ){
+            return;
+        }
+
+
+        let linkURL;
+
+
+        try{
+
+            linkURL =
+                new URL(
+                    rawHref,
+                    window.location.href
+                );
+
+        }catch(error){
+
+            return;
+
+        }
+
+
+        const isExternal =
+            linkURL.origin !==
+            window.location.origin;
+
+
+        if(!isExternal){
+            return;
+        }
+
+
+        link.target =
+            "_blank";
+
+        link.rel =
+            "noopener noreferrer";
+
+
+        link.classList.add(
+            "external-link"
+        );
+
+
+        if(
+            !link.querySelector(
+                ".external-link__icon"
+            )
+        ){
+
+            const icon =
+                document.createElement("span");
+
+            icon.className =
+                "external-link__icon";
+
+            icon.setAttribute(
+                "aria-hidden",
+                "true"
+            );
+
+            icon.textContent =
+                "↗";
+
+            link.appendChild(icon);
+
+        }
+
+
+        const existingLabel =
+            link.getAttribute("aria-label");
+
+        if(!existingLabel){
+
+            const visibleText =
+                link.textContent.trim();
+
+            if(visibleText){
+
+                link.setAttribute(
+                    "aria-label",
+                    `${visibleText} — opens an external website`
+                );
+
+            }
+
+        }
+
+    });
+
+});
+
+/* ==========================================================
+                SECTION CONSTELLATION NAVIGATOR
+========================================================== */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const navigator =
+        document.getElementById(
+            "sectionConstellation"
+        );
+
+    if(!navigator){
+        return;
+    }
+
+    const sections = [
+        ...document.querySelectorAll(
+            "body > section:not(#cinematicWelcome)"
+        )
+    ].filter(section => {
+
+        return (
+            section.id !==
+            "cinematicWelcome"
+        );
+
+    });
+
+    if(sections.length < 2){
+
+        navigator.remove();
+        return;
+
+    }
+
+    const items = [];
+
+    function createLabel(section){
+
+        const customLabel =
+            section.dataset.navLabel;
+
+        if(customLabel){
+            return customLabel;
+        }
+
+        const heading =
+            section.querySelector(
+                "h1, h2, h3"
+            );
+
+        if(heading){
+
+            return heading
+                .textContent
+                .trim();
+
+        }
+
+        return section.id
+            .replace(/[-_]/g, " ")
+            .replace(
+                /\b\w/g,
+                letter =>
+                    letter.toUpperCase()
+            );
+
+    }
+
+    sections.forEach(section => {
+
+        const label =
+            createLabel(section);
+
+        const button =
+            document.createElement(
+                "button"
+            );
+
+        button.type =
+            "button";
+
+        button.className =
+            "constellation-item";
+
+        button.setAttribute(
+            "aria-label",
+            `Go to ${label}`
+        );
+
+        const dot =
+            document.createElement(
+                "span"
+            );
+
+        dot.className =
+            "constellation-dot";
+
+        dot.setAttribute(
+            "aria-hidden",
+            "true"
+        );
+
+        const labelElement =
+            document.createElement(
+                "span"
+            );
+
+        labelElement.className =
+            "constellation-label";
+
+        labelElement.textContent =
+            label;
+
+        button.appendChild(dot);
+        button.appendChild(labelElement);
+
+        button.addEventListener(
+            "click",
+            event => {
+
+                event.preventDefault();
+                event.stopImmediatePropagation();
+
+                section.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
+
+            }
+        );
+
+        navigator.appendChild(
+            button
+        );
+
+        items.push(button);
+
+    });
+
+    function updateConstellation(){
+
+        const marker =
+            window.innerHeight * 0.45;
+
+        let activeIndex =
+            0;
+
+        sections.forEach(
+            (section, index) => {
+
+                const rect =
+                    section.getBoundingClientRect();
+
+                if(rect.top <= marker){
+
+                    activeIndex =
+                        index;
+
+                }
+
+            }
+        );
+
+        items.forEach(
+            (item, index) => {
+
+                item.classList.toggle(
+                    "is-active",
+                    index === activeIndex
+                );
+
+                item.classList.toggle(
+                    "is-passed",
+                    index < activeIndex
+                );
+
+            }
+        );
+
+    }
+
+    updateConstellation();
+
+    window.addEventListener(
+        "scroll",
+        updateConstellation,
+        {
+            passive: true
+        }
+    );
+
+    window.addEventListener(
+        "resize",
+        updateConstellation
+    );
+
+    window.setTimeout(() => {
+
+        navigator.classList.add(
+            "is-ready"
+        );
+
+    }, 500);
+
+});
+
+/* ==========================================================
+                SECTION ARRIVAL ANIMATION
+========================================================== */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const sections = [
+        ...document.querySelectorAll(
+            "body > section:not(#cinematicWelcome)"
+        )
+    ];
+
+    if(!sections.length){
+        return;
+    }
+
+    const arrivalObserver =
+        new IntersectionObserver(
+            entries => {
+
+                entries.forEach(entry => {
+
+                    if(!entry.isIntersecting){
+                        return;
+                    }
+
+                    entry.target.classList.add(
+                        "section-arrived"
+                    );
+
+                    arrivalObserver.unobserve(
+                        entry.target
+                    );
+
+                });
+
+            },
+            {
+                threshold: 0.28,
+                rootMargin:
+                    "0px 0px -12% 0px"
+            }
+        );
+
+    sections.forEach(section => {
+
+        const heading =
+            section.querySelector(
+                "h1, h2, h3"
+            );
+
+        if(!heading){
+            return;
+        }
+
+        arrivalObserver.observe(section);
+
+    });
 
 });
