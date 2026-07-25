@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 
@@ -1812,3 +1813,1819 @@ aria-labelledby="portfolioTelemetryTitle"
 </body>
 
 </html>
+=======
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script>
+        try {
+            if (sessionStorage.getItem("msa-welcome-seen") === "true") {
+                document.documentElement.classList.add("welcome-already-seen");
+            }
+        } catch (error) {
+            /* Continue normally if storage is unavailable. */
+        }
+    </script>
+    
+    <title>Home</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <nav
+    class="section-constellation"
+    id="sectionConstellation"
+    aria-label="Page sections"
+    style="
+        position: fixed !important;
+        left: auto !important;
+        right: 32px !important;
+        top: 50% !important;
+        width: 12px !important;
+        min-width: 12px !important;
+        max-width: 12px !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        transform: translateY(-50%) !important;
+    "
+></nav>
+
+<!-- =========================================
+     FIRST-VISIT CINEMATIC WELCOME
+========================================== -->
+<section
+    class="cinematic-welcome"
+    id="cinematicWelcome"
+    aria-label="Welcome introduction"
+>
+    <div
+        class="cinematic-welcome__atmosphere"
+        aria-hidden="true"
+    >
+        <div class="cinematic-welcome__glow"></div>
+        <div class="cinematic-welcome__grid"></div>
+        <div class="cinematic-welcome__grain"></div>
+
+        <span class="cinematic-welcome__flight-line"></span>
+        <span class="cinematic-welcome__flight-dot"></span>
+    </div>
+
+    <button
+        class="cinematic-welcome__skip"
+        id="cinematicWelcomeSkip"
+        type="button"
+        aria-label="Skip welcome introduction"
+    >
+        Skip intro
+    </button>
+
+    <div
+    class="cinematic-welcome__atmosphere"
+    aria-hidden="true"
+>
+    <div class="cinematic-welcome__glow"></div>
+    <div class="cinematic-welcome__grid"></div>
+    <div class="cinematic-welcome__grain"></div>
+
+    <span class="cinematic-welcome__flight-line"></span>
+    <span class="cinematic-welcome__flight-dot"></span>
+</div>
+
+<button
+    class="cinematic-welcome__skip"
+    id="cinematicWelcomeSkip"
+    type="button"
+    aria-label="Skip welcome introduction"
+    onclick="
+        const welcome = this.closest('.cinematic-welcome');
+        welcome.classList.add('is-leaving');
+        sessionStorage.setItem('msa-welcome-seen', 'true');
+        document.body.classList.remove('cinematic-welcome-active');
+
+        setTimeout(() => {
+            document.documentElement.classList.add('welcome-already-seen');
+            welcome.remove();
+        }, 1400);
+    "
+>
+    Skip intro
+</button>
+
+<div class="cinematic-welcome__content">
+
+    <div class="cinematic-welcome__content">
+
+        <p class="cinematic-welcome__opening">
+            Every journey begins long before takeoff.
+        </p>
+
+        <div class="cinematic-welcome__identity">
+
+            <p class="cinematic-welcome__eyebrow">
+                THE JOURNEY OF
+            </p>
+
+            <h1>
+                <span>Muhammad</span>
+                <span>Subhan</span>
+            </h1>
+
+        </div>
+
+        <p class="cinematic-welcome__fields">
+            Aviation
+            <span aria-hidden="true">•</span>
+            Technology
+            <span aria-hidden="true">•</span>
+            Purpose
+        </p>
+
+        <p class="cinematic-welcome__closing">
+            This is the story of where I am going.
+        </p>
+
+    </div>
+
+    <div
+        class="cinematic-welcome__exit"
+        aria-hidden="true"
+    ></div>
+</section>
+
+    <div class="custom-cursor"></div>
+    <div class="custom-cursor-dot"></div>
+
+    <div class="page-transition">
+        <div class="page-loading-bar"></div>
+    </div>
+
+
+    <div class="page-scroll-progress" aria-hidden="true">
+        <div class="page-scroll-progress-fill"></div>
+    </div>
+
+    <nav>
+
+        <div class="logo">
+            Muhammad Subhan
+        </div>
+    
+    
+        <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="primary-navigation"
+    >
+        <span aria-hidden="true">☰</span>
+    </button>
+    
+    
+    <ul class="nav-links" id="primary-navigation">
+
+    <li><a href="index.html">Home</a></li>
+    
+    <li><a href="about.html">About Me</a></li>
+    
+    <li><a href="timeline.html">Journey</a></li>
+    
+    <li><a href="skills.html">Skills</a></li>
+    
+    <li><a href="certification.html">Certifications</a></li>
+    
+    <li><a href="contact.html">Contact</a></li>
+
+</ul>
+    
+    </nav>
+
+
+    <!-- =========================================
+     SIGNATURE AVIATION HERO
+========================================== -->
+<section class="hero">
+
+    <div class="background">
+
+        <div class="glow"></div>
+
+        <div class="particles"></div>
+
+    </div>
+
+
+    <div class="hero-signature">
+
+        <!-- HERO INFORMATION -->
+
+        <div class="hero-signature-copy">
+
+            <div class="hero-location">
+
+                <span aria-hidden="true"></span>
+
+                Riyadh, Saudi Arabia
+
+            </div>
+
+
+            <p class="tag">
+                AVIATION&nbsp;&nbsp;•&nbsp;&nbsp;TECHNOLOGY&nbsp;&nbsp;•&nbsp;&nbsp;CONTINUOUS LEARNING
+            </p>
+
+
+            <h1>
+
+                <span>
+                    Muhammad
+                </span>
+
+                <span>
+                    Subhan
+                </span>
+
+            </h1>
+
+
+            <p class="hero-subtitle">
+                Aspiring commercial pilot building the knowledge,
+                discipline and perspective required for a future
+                in professional aviation.
+            </p>
+
+
+            <p class="description">
+                Documenting an evolving journey through education,
+                aviation, technology, professional experiences and
+                continuous personal development.
+            </p>
+
+
+            <div class="buttons">
+
+                <a
+                    href="about.html"
+                    class="hero-primary-button"
+                >
+                    <span>
+                        Explore my story
+                    </span>
+
+                    <span aria-hidden="true">
+                        →
+                    </span>
+                </a>
+
+
+                <a
+                    href="timeline.html"
+                    class="hero-secondary-button"
+                >
+                    View journey
+                </a>
+
+            </div>
+
+
+            <div class="hero-status-strip">
+
+                <div>
+
+                    <span>
+                        CURRENT STAGE
+                    </span>
+
+                    <strong>
+                        IGCSE Complete
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        NEXT CHECKPOINT
+                    </span>
+
+                    <strong>
+                        Grade 11
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        DESTINATION
+                    </span>
+
+                    <strong>
+                        Commercial Aviation
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- AVIATION NAVIGATION DISPLAY -->
+
+        <div
+            class="aviation-navigation-display"
+            aria-hidden="true"
+        >
+
+            <div class="navigation-display-header">
+
+                <span>
+                    MSA / NAV
+                </span>
+
+                <span>
+                    ACTIVE ROUTE
+                </span>
+
+            </div>
+
+
+            <div class="navigation-scope">
+
+                <div class="navigation-sweep"></div>
+
+
+                <svg
+                    class="navigation-map"
+                    viewBox="0 0 500 500"
+                    role="presentation"
+                >
+
+                    <!-- Radar rings -->
+
+                    <circle
+                        class="navigation-ring navigation-ring-outer"
+                        cx="250"
+                        cy="250"
+                        r="202"
+                    />
+
+                    <circle
+                        class="navigation-ring"
+                        cx="250"
+                        cy="250"
+                        r="145"
+                    />
+
+                    <circle
+                        class="navigation-ring"
+                        cx="250"
+                        cy="250"
+                        r="88"
+                    />
+
+
+                    <!-- Crosshair -->
+
+                    <line
+                        class="navigation-axis"
+                        x1="250"
+                        y1="35"
+                        x2="250"
+                        y2="465"
+                    />
+
+                    <line
+                        class="navigation-axis"
+                        x1="35"
+                        y1="250"
+                        x2="465"
+                        y2="250"
+                    />
+
+
+                    <!-- Minor navigation lines -->
+
+                    <line
+                        class="navigation-minor-axis"
+                        x1="98"
+                        y1="98"
+                        x2="402"
+                        y2="402"
+                    />
+
+                    <line
+                        class="navigation-minor-axis"
+                        x1="402"
+                        y1="98"
+                        x2="98"
+                        y2="402"
+                    />
+
+
+                    <!-- Main trajectory -->
+
+                    <path
+                        class="navigation-route-shadow"
+                        d="
+                            M 100 365
+                            C 145 330,
+                              165 285,
+                              218 270
+                            S 310 220,
+                              390 115
+                        "
+                    />
+
+                    <path
+                        class="navigation-route"
+                        pathLength="1"
+                        d="
+                            M 100 365
+                            C 145 330,
+                              165 285,
+                              218 270
+                            S 310 220,
+                              390 115
+                        "
+                    />
+
+
+                    <!-- Origin -->
+
+                    <circle
+                        class="navigation-origin-halo"
+                        cx="100"
+                        cy="365"
+                        r="16"
+                    />
+
+                    <circle
+                        class="navigation-origin"
+                        cx="100"
+                        cy="365"
+                        r="6"
+                    />
+
+
+                    <!-- Present location -->
+
+                    <circle
+                        class="navigation-current-halo"
+                        cx="218"
+                        cy="270"
+                        r="22"
+                    />
+
+                    <circle
+                        class="navigation-current"
+                        cx="218"
+                        cy="270"
+                        r="7"
+                    />
+
+
+                    <!-- Destination -->
+
+                    <circle
+                        class="navigation-destination-halo"
+                        cx="390"
+                        cy="115"
+                        r="18"
+                    />
+
+                    <circle
+                        class="navigation-destination"
+                        cx="390"
+                        cy="115"
+                        r="6"
+                    />
+
+                </svg>
+
+
+                <div class="navigation-plane">
+
+                    <svg
+                        viewBox="0 0 24 24"
+                        role="presentation"
+                    >
+
+                        <path
+                            d="
+                                M21 16v-2l-8-5V3.5
+                                a1.5 1.5 0 0 0-3 0V9
+                                l-8 5v2l8-2.5V19
+                                l-2 1.5V22l3.5-1
+                                3.5 1v-1.5L13 19v-5.5L21 16Z
+                            "
+                        />
+
+                    </svg>
+
+                </div>
+
+
+                <div class="navigation-label navigation-label-origin">
+
+                    <span>
+                        ORIGIN
+                    </span>
+
+                    <strong>
+                        RUH
+                    </strong>
+
+                </div>
+
+
+                <div class="navigation-label navigation-label-current">
+
+                    <span>
+                        PRESENT
+                    </span>
+
+                    <strong>
+                        EDUCATION
+                    </strong>
+
+                </div>
+
+
+                <div class="navigation-label navigation-label-destination">
+
+                    <span>
+                        DESTINATION
+                    </span>
+
+                    <strong>
+                        FLIGHT DECK
+                    </strong>
+
+                </div>
+
+
+                <span class="navigation-coordinate navigation-coordinate-north">
+                    N 24° 42′
+                </span>
+
+                <span class="navigation-coordinate navigation-coordinate-east">
+                    E 46° 40′
+                </span>
+
+            </div>
+
+
+            <div class="navigation-display-footer">
+
+                <div>
+
+                    <span>
+                        CALLSIGN
+                    </span>
+
+                    <strong>
+                        MSA-01
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        ROUTE STATUS
+                    </span>
+
+                    <strong>
+                        IN PROGRESS
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        HEADING
+                    </span>
+
+                    <strong>
+                        FORWARD
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="hero-scroll-cue">
+
+        <span>
+            Scroll to explore
+        </span>
+
+        <i aria-hidden="true"></i>
+
+    </div>
+
+</section>
+
+
+    <!-- =========================================
+         VISITOR LENS
+    ========================================== -->
+    <section class="visitor-lens" aria-labelledby="visitorLensTitle">
+
+        <div class="visitor-lens-header">
+
+            <p class="visitor-lens-eyebrow">
+                PERSONALISE YOUR VISIT
+            </p>
+
+            <h2 id="visitorLensTitle">
+                What brought you here?
+            </h2>
+
+            <p>
+                Choose what interests you and I’ll recommend the best
+                route through my portfolio.
+            </p>
+
+        </div>
+
+
+        <div
+            class="visitor-lens-options"
+            role="group"
+            aria-label="Choose your reason for visiting"
+        >
+
+            <button
+                type="button"
+                class="visitor-lens-button"
+                data-visitor-lens="aviation"
+                aria-pressed="false"
+            >
+                <span aria-hidden="true">✈</span>
+                Aviation
+            </button>
+
+
+            <button
+                type="button"
+                class="visitor-lens-button"
+                data-visitor-lens="opportunities"
+                aria-pressed="false"
+            >
+                <span aria-hidden="true">◈</span>
+                Opportunities
+            </button>
+
+
+            <button
+                type="button"
+                class="visitor-lens-button"
+                data-visitor-lens="technology"
+                aria-pressed="false"
+            >
+                <span aria-hidden="true">⌘</span>
+                Technology
+            </button>
+
+
+            <button
+                type="button"
+                class="visitor-lens-button"
+                data-visitor-lens="all"
+                aria-pressed="true"
+            >
+                <span aria-hidden="true">◎</span>
+                Explore Everything
+            </button>
+
+        </div>
+
+
+        <div
+            class="visitor-route-heading"
+            aria-live="polite"
+        >
+
+            <div>
+                <p>RECOMMENDED ROUTE</p>
+
+                <h3 id="visitorRouteTitle">
+                    Explore my complete portfolio
+                </h3>
+            </div>
+
+            <span id="visitorRouteCount">
+                5 pages
+            </span>
+
+        </div>
+
+
+        <div class="visitor-route-grid">
+
+            <a
+                href="about.html"
+                class="visitor-route-card"
+                data-visitor-audience="aviation opportunities technology all"
+            >
+
+                <span class="visitor-route-number">
+                    01
+                </span>
+
+                <div>
+                    <p class="visitor-route-label">
+                        START HERE
+                    </p>
+
+                    <h3>
+                        About Me
+                    </h3>
+
+                    <p>
+                        Understand who I am, what drives me and the
+                        future I am working towards.
+                    </p>
+                </div>
+
+                <span class="visitor-route-arrow" aria-hidden="true">
+                    →
+                </span>
+
+            </a>
+
+
+            <a
+                href="timeline.html"
+                class="visitor-route-card"
+                data-visitor-audience="aviation opportunities all"
+            >
+
+                <span class="visitor-route-number">
+                    02
+                </span>
+
+                <div>
+                    <p class="visitor-route-label">
+                        MY PROGRESS
+                    </p>
+
+                    <h3>
+                        Journey
+                    </h3>
+
+                    <p>
+                        Follow my academic development, aviation
+                        experiences and future flight plan.
+                    </p>
+                </div>
+
+                <span class="visitor-route-arrow" aria-hidden="true">
+                    →
+                </span>
+
+            </a>
+
+
+            <a
+                href="skills.html"
+                class="visitor-route-card"
+                data-visitor-audience="technology opportunities all"
+            >
+
+                <span class="visitor-route-number">
+                    03
+                </span>
+
+                <div>
+                    <p class="visitor-route-label">
+                        CAPABILITIES
+                    </p>
+
+                    <h3>
+                        Skills
+                    </h3>
+
+                    <p>
+                        Explore the technical, communication and
+                        professional abilities I am developing.
+                    </p>
+                </div>
+
+                <span class="visitor-route-arrow" aria-hidden="true">
+                    →
+                </span>
+
+            </a>
+
+
+            <a
+                href="certification.html"
+                class="visitor-route-card"
+                data-visitor-audience="aviation opportunities technology all"
+            >
+
+                <span class="visitor-route-number">
+                    04
+                </span>
+
+                <div>
+                    <p class="visitor-route-label">
+                        PROOF OF LEARNING
+                    </p>
+
+                    <h3>
+                        Certifications
+                    </h3>
+
+                    <p>
+                        View authenticated learning, event participation
+                        and professional development.
+                    </p>
+                </div>
+
+                <span class="visitor-route-arrow" aria-hidden="true">
+                    →
+                </span>
+
+            </a>
+
+
+            <a
+                href="contact.html"
+                class="visitor-route-card"
+                data-visitor-audience="opportunities all"
+            >
+
+                <span class="visitor-route-number">
+                    05
+                </span>
+
+                <div>
+                    <p class="visitor-route-label">
+                        CONNECT
+                    </p>
+
+                    <h3>
+                        Contact
+                    </h3>
+
+                    <p>
+                        Get in touch regarding aviation, learning,
+                        events or future opportunities.
+                    </p>
+                </div>
+
+                <span class="visitor-route-arrow" aria-hidden="true">
+                    →
+                </span>
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+     PORTFOLIO TELEMETRY
+========================================== -->
+<section
+class="portfolio-telemetry"
+aria-labelledby="portfolioTelemetryTitle"
+>
+
+<div class="portfolio-telemetry-header">
+
+    <div>
+
+        <p>
+            PORTFOLIO TELEMETRY
+        </p>
+
+        <h2 id="portfolioTelemetryTitle">
+            Verified signals of progress
+        </h2>
+
+    </div>
+
+
+    <div class="portfolio-telemetry-status">
+
+        <span aria-hidden="true"></span>
+
+        DATA CURRENT
+
+    </div>
+
+</div>
+
+
+<div class="portfolio-telemetry-grid">
+
+    <!-- CREDENTIALS -->
+
+    <article class="telemetry-item">
+
+        <div class="telemetry-item-top">
+
+            <span>
+                01 / CREDENTIALS
+            </span>
+
+            <span aria-hidden="true">
+                VERIFIED
+            </span>
+
+        </div>
+
+
+        <div class="telemetry-value">
+
+            <strong>
+                05
+            </strong>
+
+            <span>
+                credentials
+            </span>
+
+        </div>
+
+
+        <h3>
+            Verifiable Learning
+        </h3>
+
+
+        <p>
+            Completed courses covering aviation, aircraft,
+            business administration and finance.
+        </p>
+
+
+        <div
+            class="telemetry-signal-dots"
+            aria-label="Five verified credentials"
+        >
+
+            <span class="active"></span>
+            <span class="active"></span>
+            <span class="active"></span>
+            <span class="active"></span>
+            <span class="active"></span>
+
+        </div>
+
+    </article>
+
+
+    <!-- EVENTS -->
+
+    <article class="telemetry-item">
+
+        <div class="telemetry-item-top">
+
+            <span>
+                02 / EXPOSURE
+            </span>
+
+            <span aria-hidden="true">
+                ACTIVE
+            </span>
+
+        </div>
+
+
+        <div class="telemetry-value">
+
+            <strong>
+                06
+            </strong>
+
+            <span>
+                events
+            </span>
+
+        </div>
+
+
+        <h3>
+            Industry Experiences
+        </h3>
+
+
+        <p>
+            Exposure to aviation, cybersecurity, artificial
+            intelligence, gaming and business environments.
+        </p>
+
+
+        <svg
+            class="telemetry-wave"
+            viewBox="0 0 260 42"
+            role="img"
+            aria-label="Industry exposure signal"
+        >
+
+            <path
+                class="telemetry-wave-background"
+                d="
+                    M2 31
+                    L32 31
+                    L47 14
+                    L64 32
+                    L93 32
+                    L108 21
+                    L122 31
+                    L151 31
+                    L168 9
+                    L184 32
+                    L214 32
+                    L228 20
+                    L242 31
+                    L258 31
+                "
+            />
+
+            <path
+                class="telemetry-wave-signal"
+                pathLength="1"
+                d="
+                    M2 31
+                    L32 31
+                    L47 14
+                    L64 32
+                    L93 32
+                    L108 21
+                    L122 31
+                    L151 31
+                    L168 9
+                    L184 32
+                    L214 32
+                    L228 20
+                    L242 31
+                    L258 31
+                "
+            />
+
+        </svg>
+
+    </article>
+
+
+    <!-- DOMAINS -->
+
+    <article class="telemetry-item">
+
+        <div class="telemetry-item-top">
+
+            <span>
+                03 / DIRECTION
+            </span>
+
+            <span aria-hidden="true">
+                CONNECTED
+            </span>
+
+        </div>
+
+
+        <div class="telemetry-value">
+
+            <strong>
+                03
+            </strong>
+
+            <span>
+                domains
+            </span>
+
+        </div>
+
+
+        <h3>
+            Connected Development
+        </h3>
+
+
+        <p>
+            Three complementary areas shaping one long-term
+            academic and professional direction.
+        </p>
+
+
+        <div
+            class="telemetry-domain-map"
+            aria-label="Aviation, technology and business"
+        >
+
+            <span>
+                AVIATION
+            </span>
+
+            <span>
+                TECHNOLOGY
+            </span>
+
+            <span>
+                BUSINESS
+            </span>
+
+        </div>
+
+    </article>
+
+
+    <!-- EDUCATION -->
+
+    <article class="telemetry-item telemetry-item-stage">
+
+        <div class="telemetry-item-top">
+
+            <span>
+                04 / EDUCATION
+            </span>
+
+            <span aria-hidden="true">
+                CHECKPOINT
+            </span>
+
+        </div>
+
+
+        <div class="telemetry-stage-value">
+
+            <span>
+                STAGE
+            </span>
+
+            <strong>
+                IGCSE
+            </strong>
+
+        </div>
+
+
+        <h3>
+            Examinations Completed
+        </h3>
+
+
+        <p>
+            The IGCSE examination stage is complete, with
+            Grade 11 representing the next academic checkpoint.
+        </p>
+
+
+        <div class="telemetry-stage-route">
+
+            <div>
+
+                <span class="complete"></span>
+
+                <small>
+                    IGCSE
+                </small>
+
+            </div>
+
+
+            <i aria-hidden="true"></i>
+
+
+            <div>
+
+                <span></span>
+
+                <small>
+                    Grade 11
+                </small>
+
+            </div>
+
+        </div>
+
+    </article>
+
+</div>
+
+
+<div class="portfolio-telemetry-footer">
+
+    <p>
+
+        <span>
+            SOURCE
+        </span>
+
+        Portfolio records and verified credentials
+
+    </p>
+
+
+    <a href="certification.html">
+
+        Inspect supporting evidence
+
+        <span aria-hidden="true">
+            →
+        </span>
+
+    </a>
+
+</div>
+
+</section>
+
+
+<!-- =========================================
+     ACTIVE FLIGHT PLAN
+========================================== -->
+<section
+    class="active-flight-plan"
+    aria-labelledby="flightPlanTitle"
+>
+
+    <div class="flight-plan-header">
+
+        <div>
+
+            <p class="flight-plan-eyebrow">
+                CURRENT STATUS
+            </p>
+
+            <h2 id="flightPlanTitle">
+                My Active Flight Plan
+            </h2>
+
+            <p>
+                A concise view of where I am now, what comes next,
+                and the long-term destination guiding my progress.
+            </p>
+
+        </div>
+
+
+        <div class="flight-plan-status">
+
+            <span aria-hidden="true"></span>
+
+            Actively progressing
+
+        </div>
+
+    </div>
+
+
+    <div class="flight-plan-route">
+
+        <article class="flight-plan-stage flight-plan-stage-current">
+
+            <div class="flight-plan-marker">
+
+                <span aria-hidden="true"></span>
+
+            </div>
+
+
+            <div class="flight-plan-stage-heading">
+
+                <span>
+                    PRESENT POSITION
+                </span>
+
+                <strong>
+                    01
+                </strong>
+
+            </div>
+
+
+            <h3>
+                IGCSE Examinations Completed
+            </h3>
+
+            <p>
+                I have completed my IGCSE examinations and am
+                preparing for the next stage of my education.
+            </p>
+
+
+            <div class="flight-plan-meta">
+
+                <span>
+                    STATUS
+                </span>
+
+                <strong>
+                    Completed
+                </strong>
+
+            </div>
+
+        </article>
+
+
+        <article class="flight-plan-stage">
+
+            <div class="flight-plan-marker">
+
+                <span aria-hidden="true"></span>
+
+            </div>
+
+
+            <div class="flight-plan-stage-heading">
+
+                <span>
+                    NEXT CHECKPOINT
+                </span>
+
+                <strong>
+                    02
+                </strong>
+
+            </div>
+
+
+            <h3>
+                Grade 11
+            </h3>
+
+            <p>
+                The next academic stage will focus on building
+                the knowledge and discipline required for my
+                future aviation path.
+            </p>
+
+
+            <div class="flight-plan-meta">
+
+                <span>
+                    EXPECTED
+                </span>
+
+                <strong>
+                    September 2026
+                </strong>
+
+            </div>
+
+        </article>
+
+
+        <article class="flight-plan-stage flight-plan-stage-destination">
+
+            <div class="flight-plan-marker">
+
+                <span aria-hidden="true"></span>
+
+            </div>
+
+
+            <div class="flight-plan-stage-heading">
+
+                <span>
+                    DESTINATION
+                </span>
+
+                <strong>
+                    03
+                </strong>
+
+            </div>
+
+
+            <h3>
+                Commercial Airline Pilot
+            </h3>
+
+            <p>
+                My long-term objective is to earn the qualifications,
+                experience and professional responsibility required
+                to fly commercially.
+            </p>
+
+
+            <div class="flight-plan-meta">
+
+                <span>
+                    DIRECTION
+                </span>
+
+                <strong>
+                    Aviation
+                </strong>
+
+            </div>
+
+        </article>
+
+    </div>
+
+
+    <div class="flight-plan-footer">
+
+        <p>
+
+            <span>
+                Last reviewed
+            </span>
+
+            July 2026
+
+        </p>
+
+
+        <a href="timeline.html">
+
+            View the complete journey
+
+            <span aria-hidden="true">
+                →
+            </span>
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<div class="command-palette">
+
+    <div class="command-box">
+
+        <input
+            type="text"
+            id="commandInput"
+            placeholder="Search pages... (Ctrl + K)"
+            autocomplete="off"
+        >
+
+        <div class="command-results">
+
+            <a href="index.html">🏠 Home</a>
+            <a href="about.html">👤 About Me</a>
+            <a href="timeline.html">🛫 Journey</a>
+            <a href="skills.html">💡 Skills</a>
+            <a href="certifications.html">🏆 Certifications</a>
+            <a href="contact.html">✉️ Contact</a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<button
+    class="back-to-top progress-return"
+    type="button"
+    aria-label="Back to top — 0% through page"
+    data-progress-return
+>
+    <svg
+        class="progress-return__ring"
+        viewBox="0 0 48 48"
+        aria-hidden="true"
+    >
+        <circle
+            class="progress-return__track"
+            cx="24"
+            cy="24"
+            r="21"
+        ></circle>
+
+        <circle
+            class="progress-return__value"
+            cx="24"
+            cy="24"
+            r="21"
+        ></circle>
+    </svg>
+
+    <span class="progress-return__arrow" aria-hidden="true">
+        ↑
+    </span>
+
+    <span class="progress-return__percentage" aria-hidden="true">
+        0%
+    </span>
+</button>
+
+<script src="js/script.js"></script>
+<script src="js/scroll-return.js"></script>
+
+
+<!-- =========================================
+     PROFESSIONAL SITE FOOTER
+========================================== -->
+<footer class="site-footer">
+
+    <div class="site-footer-inner">
+
+        <!-- PRIMARY FOOTER INFORMATION -->
+
+        <div class="site-footer-main">
+
+            <div class="site-footer-brand">
+
+                <a
+                    href="index.html"
+                    class="site-footer-identity"
+                    aria-label="Muhammad Subhan homepage"
+                >
+
+                    <span class="site-footer-monogram">
+                        MS
+                    </span>
+
+
+                    <span>
+
+                        <strong>
+                            Muhammad Subhan
+                        </strong>
+
+                        <small>
+                            Personal Portfolio
+                        </small>
+
+                    </span>
+
+                </a>
+
+
+                <p>
+                    An aspiring commercial pilot documenting an
+                    evolving journey through education, aviation,
+                    technology and continuous development.
+                </p>
+
+
+                <div class="site-footer-location">
+
+                    <span aria-hidden="true"></span>
+
+                    Based in Riyadh, Saudi Arabia
+
+                </div>
+
+            </div>
+
+
+            <!-- FOOTER NAVIGATION -->
+
+            <nav
+                class="site-footer-navigation"
+                aria-label="Footer navigation"
+            >
+
+                <div>
+
+                    <p>
+                        EXPLORE
+                    </p>
+
+                    <a href="about.html">
+                        About Me
+                    </a>
+
+                    <a href="timeline.html">
+                        Journey
+                    </a>
+
+                    <a href="skills.html">
+                        Skills
+                    </a>
+
+                </div>
+
+
+                <div>
+
+                    <p>
+                        EVIDENCE
+                    </p>
+
+                    <a href="certification.html">
+                        Certifications
+                    </a>
+
+                    <a href="certification.html#experiences">
+                        Experiences
+                    </a>
+
+                    <a href="contact.html">
+                        Contact
+                    </a>
+
+                </div>
+
+
+                <div>
+
+                    <p>
+                        CONNECT
+                    </p>
+
+                    <a href="mailto:subhan.ahmadbaqa@gmail.com">
+                        Email
+                    </a>
+
+                    <a
+                        href="https://www.linkedin.com/in/ms910"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        LinkedIn
+
+                        <span aria-hidden="true">
+                            ↗
+                        </span>
+
+                    </a>
+
+                </div>
+
+            </nav>
+
+
+            <!-- CURRENT STATUS -->
+
+            <aside
+                class="site-footer-status"
+                aria-label="Current portfolio status"
+            >
+
+                <div class="site-footer-status-heading">
+
+                    <span aria-hidden="true"></span>
+
+                    CURRENTLY PROGRESSING
+
+                </div>
+
+
+                <h2>
+                    Preparing for the next academic stage
+                </h2>
+
+
+                <p>
+                    IGCSE examinations completed. The next checkpoint
+                    is Grade 11, with a long-term direction toward
+                    professional aviation.
+                </p>
+
+
+                <dl>
+
+                    <div>
+
+                        <dt>
+                            Current stage
+                        </dt>
+
+                        <dd>
+                            IGCSE Complete
+                        </dd>
+
+                    </div>
+
+
+                    <div>
+
+                        <dt>
+                            Next checkpoint
+                        </dt>
+
+                        <dd>
+                            Grade 11
+                        </dd>
+
+                    </div>
+
+
+                    <div>
+
+                        <dt>
+                            Direction
+                        </dt>
+
+                        <dd>
+                            Commercial Aviation
+                        </dd>
+
+                    </div>
+
+                </dl>
+
+            </aside>
+
+        </div>
+
+
+        <!-- CONTACT HANDOFF -->
+
+        <div class="site-footer-handoff">
+
+            <div>
+
+                <p>
+                    RELEVANT OPPORTUNITY OR CONVERSATION?
+                </p>
+
+                <h2>
+                    Let’s start with the right context.
+                </h2>
+
+            </div>
+
+
+            <a href="contact.html">
+
+                <span>
+                    Prepare a message
+                </span>
+
+                <span aria-hidden="true">
+                    →
+                </span>
+
+            </a>
+
+        </div>
+
+
+        <!-- LEGAL / META ROW -->
+
+        <div class="site-footer-bottom">
+
+            <p>
+                © 2026 Muhammad Subhan
+            </p>
+
+
+            <p>
+                Designed and built as an evolving personal portfolio
+            </p>
+
+
+            <p>
+
+                <span aria-hidden="true"></span>
+
+                Last reviewed July 2026
+
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+<!-- Connection Status Indicator -->
+<div
+    class="connection-status"
+    id="connectionStatus"
+    role="status"
+    aria-live="polite"
+    aria-hidden="true"
+>
+    <span
+        class="connection-status__dot"
+        aria-hidden="true"
+    ></span>
+
+    <span id="connectionStatusText">
+        Connection lost
+    </span>
+</div>
+
+</body>
+
+</html>
+>>>>>>> eb69bdb4dda774a4d4c353d302a6becab1a27222

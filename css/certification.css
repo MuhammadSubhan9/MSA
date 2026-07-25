@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* ==========================================================
                 CERTIFICATION PAGE
 ========================================================== */
@@ -1509,3 +1510,1516 @@ html[data-user-motion="calm"]
     }
 
 }
+=======
+/* ==========================================================
+                CERTIFICATION PAGE
+========================================================== */
+
+
+.cert-hero{
+
+    padding-top:180px;
+    padding-bottom:90px;
+    text-align:center;
+
+}
+
+
+.cert-hero h1{
+
+    font-size:72px;
+    font-weight:800;
+    margin:20px 0;
+
+}
+
+
+
+.cert-hero p{
+
+    color:#B8BCC8;
+    font-size:20px;
+    width:min(700px,90%);
+    margin:auto;
+    line-height:1.8;
+
+}
+
+
+
+
+/* Certification Cards */
+
+.cert-grid{
+
+    width:min(1200px,90%);
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(2,1fr);
+
+    gap:35px;
+
+    padding-bottom:150px;
+
+}
+
+
+
+.cert-card{
+
+    padding:35px;
+
+    border-radius:28px;
+
+
+    background:
+
+    rgba(255,255,255,.06);
+
+
+    border:
+
+    1px solid rgba(255,255,255,.12);
+
+
+    backdrop-filter:blur(18px);
+
+
+    transition:.45s;
+
+
+}
+
+
+
+.cert-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:#22C55E;
+
+
+    box-shadow:
+
+    0 0 40px rgba(34,197,94,.18);
+
+}
+
+
+
+
+.cert-icon{
+
+    font-size:45px;
+
+    margin-bottom:25px;
+
+
+    filter:
+
+    drop-shadow(
+    0 0 15px rgba(34,197,94,.4)
+    );
+
+}
+
+
+
+
+.cert-card h2{
+
+    font-size:30px;
+
+    margin-bottom:18px;
+
+
+    background:
+
+    linear-gradient(
+        90deg,
+        white,
+        #60A5FA
+    );
+
+
+    -webkit-background-clip:text;
+
+    color:transparent;
+
+}
+
+
+
+
+.cert-card p{
+
+    color:#AAB2C0;
+
+    font-size:17px;
+
+    line-height:1.8;
+
+}
+
+
+
+
+.cert-info{
+
+    margin-top:25px;
+
+    padding-top:20px;
+
+    border-top:
+
+    1px solid rgba(255,255,255,.12);
+
+
+    color:#D5D8E2;
+
+    line-height:1.9;
+
+}
+
+
+
+
+
+.cert-buttons{
+
+    display:flex;
+
+    gap:15px;
+
+    margin-top:30px;
+
+    flex-wrap:wrap;
+
+}
+
+
+
+
+.cert-buttons a{
+
+    text-decoration:none;
+
+    padding:20px 60px;
+
+    border-radius:999px;
+
+    background:#22C55E;
+
+    color:white;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    display:inline-flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    min-width:220px;
+
+    transition:.3s;
+
+}
+
+
+
+.cert-buttons a:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+
+    0 0 20px rgba(34,197,94,.35);
+
+}
+
+
+
+
+/* Mobile */
+
+@media(max-width:950px){
+
+
+.cert-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+
+.cert-hero h1{
+
+    font-size:48px;
+
+}
+
+
+}
+/* ==========================================================
+                AVIATION FOCUS BADGE
+========================================================== */
+
+
+.cert-focus{
+
+    width:min(700px,90%);
+
+    margin:0 auto 70px;
+
+    padding:25px 35px;
+
+    text-align:center;
+
+    border-radius:25px;
+
+
+    background:
+
+    rgba(34,197,94,.08);
+
+
+    border:
+
+    1px solid rgba(34,197,94,.25);
+
+
+    backdrop-filter:blur(15px);
+
+}
+
+
+
+.cert-focus span{
+
+    display:inline-block;
+
+    font-size:22px;
+
+    font-weight:700;
+
+    color:#65F3A5;
+
+    margin-bottom:12px;
+
+}
+
+
+
+.cert-focus p{
+
+    color:#B8BCC8;
+
+    font-size:16px;
+
+    line-height:1.7;
+
+    margin:0;
+
+}
+/* ==========================================================
+                EXPERIENCES
+========================================================== */
+
+
+.experience-section{
+
+    width:min(1200px,90%);
+
+    margin:100px auto 150px;
+
+}
+
+
+
+.experience-title{
+
+    text-align:center;
+
+    margin-bottom:70px;
+
+}
+
+
+
+.experience-title h1{
+
+    font-size:60px;
+
+    margin:20px 0;
+
+}
+
+
+
+.experience-title p:not(.tag){
+
+    color:#B8BCC8;
+
+    font-size:18px;
+
+    line-height:1.8;
+
+}
+
+
+
+.experience-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:30px;
+
+}
+
+
+
+.experience-card{
+
+    padding:35px;
+
+    border-radius:28px;
+
+    background:
+    rgba(255,255,255,.06);
+
+    border:
+    1px solid rgba(255,255,255,.12);
+
+    backdrop-filter:blur(18px);
+
+    transition:.45s;
+
+}
+
+
+
+.experience-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:#3B82F6;
+
+}
+
+
+
+.experience-icon{
+
+    font-size:45px;
+
+    margin-bottom:25px;
+
+}
+
+
+
+.experience-card h2{
+
+    font-size:26px;
+
+    margin-bottom:15px;
+
+}
+
+
+
+.experience-card p{
+
+    color:#AAB2C0;
+
+    line-height:1.8;
+
+}
+
+
+
+.experience-card span{
+
+    display:inline-block;
+
+    margin-top:20px;
+
+    color:#65F3A5;
+
+    font-size:14px;
+
+}
+
+
+
+@media(max-width:950px){
+
+    .experience-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .experience-title h1{
+
+        font-size:45px;
+
+    }
+
+}
+/* ==========================================================
+                CERTIFICATE EVIDENCE CHAINS
+========================================================== */
+
+.cert-card {
+    position: relative;
+
+    opacity: 0;
+    transform: translateY(35px);
+
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+
+.cert-card.cert-card-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.cert-card.cert-card-visible:hover {
+    transform: translateY(-8px);
+}
+
+
+/* Verifiable status */
+
+.cert-verified-badge {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 8px;
+
+    width: fit-content;
+
+    margin-bottom: 22px;
+    padding: 8px 11px;
+
+    color: #86EFAC;
+
+    font-size: 10px;
+    line-height: 1;
+    letter-spacing: 0.13em;
+
+    border:
+        1px solid rgba(34, 197, 94, 0.25);
+
+    border-radius: 999px;
+
+    background:
+        rgba(34, 197, 94, 0.08);
+}
+
+
+.cert-verified-badge span {
+    width: 7px;
+    height: 7px;
+
+    flex: 0 0 auto;
+
+    border-radius: 50%;
+
+    background: #22C55E;
+
+    box-shadow:
+        0 0 12px rgba(34, 197, 94, 0.7);
+}
+
+
+/* Context → Evidence → Application */
+
+.cert-evidence-chain {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    margin-top: 28px;
+
+    overflow: hidden;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.1);
+
+    border-radius: 18px;
+
+    background:
+        rgba(3, 7, 18, 0.3);
+}
+
+
+.cert-evidence-chain > div {
+    min-width: 0;
+
+    padding: 18px;
+}
+
+
+.cert-evidence-chain > div + div {
+    border-left:
+        1px solid rgba(255, 255, 255, 0.09);
+}
+
+
+.cert-evidence-chain dt {
+    margin-bottom: 8px;
+
+    color: #65F3A5;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+
+.cert-evidence-chain dd {
+    margin: 0;
+
+    color: #CBD5E1;
+
+    font-size: 13px;
+    line-height: 1.65;
+}
+
+
+/* Expandable technical details */
+
+.cert-evidence-details {
+    margin-top: 20px;
+
+    border-top:
+        1px solid rgba(255, 255, 255, 0.09);
+}
+
+
+.cert-evidence-details summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    min-height: 48px;
+
+    padding: 16px 2px 0;
+
+    color: #93C5FD;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    list-style: none;
+}
+
+
+.cert-evidence-details summary::-webkit-details-marker {
+    display: none;
+}
+
+
+.cert-evidence-details summary::after {
+    content: "+";
+
+    display: grid;
+    place-items: center;
+
+    width: 26px;
+    height: 26px;
+
+    flex: 0 0 auto;
+
+    color: #60A5FA;
+
+    font-size: 18px;
+    font-weight: 400;
+
+    border:
+        1px solid rgba(96, 165, 250, 0.25);
+
+    border-radius: 50%;
+
+    background:
+        rgba(59, 130, 246, 0.07);
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease;
+}
+
+
+.cert-evidence-details[open]
+summary::after {
+    content: "−";
+
+    transform: rotate(180deg);
+
+    background:
+        rgba(59, 130, 246, 0.15);
+}
+
+
+.cert-evidence-details summary:focus-visible {
+    outline:
+        3px solid rgba(96, 165, 250, 0.65);
+
+    outline-offset: 4px;
+
+    border-radius: 6px;
+}
+
+
+.cert-evidence-details .cert-info {
+    margin-top: 16px;
+    padding: 18px;
+
+    color: #CBD5E1;
+
+    font-size: 14px;
+    line-height: 1.9;
+
+    border-top: 0;
+    border-radius: 14px;
+
+    background:
+        rgba(255, 255, 255, 0.035);
+}
+
+
+/* Make the verification button more compact */
+
+.cert-buttons {
+    margin-top: 22px;
+}
+
+
+.cert-buttons a {
+    width: 100%;
+    min-width: 0;
+
+    padding: 15px 22px;
+}
+
+
+/* Mobile layout */
+
+@media(max-width: 720px){
+
+    .cert-evidence-chain {
+        grid-template-columns: 1fr;
+    }
+
+
+    .cert-evidence-chain > div + div {
+        border-top:
+            1px solid rgba(255, 255, 255, 0.09);
+
+        border-left: 0;
+    }
+
+}
+
+
+/* Accessibility */
+
+@media(prefers-reduced-motion: reduce){
+
+    .cert-card {
+        opacity: 1;
+        transform: none;
+
+        transition: none;
+    }
+
+
+    .cert-card.cert-card-visible:hover {
+        transform: none;
+    }
+
+
+    .cert-evidence-details summary::after {
+        transition: none;
+    }
+
+}
+/* ==========================================================
+                EVIDENCE CONSTELLATION
+========================================================== */
+
+.evidence-constellation {
+    width: min(1200px, 92%);
+
+    margin: 0 auto 110px;
+    padding: clamp(30px, 5vw, 58px);
+
+    position: relative;
+    overflow: hidden;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.11);
+
+    border-radius: 30px;
+
+    background:
+        radial-gradient(
+            circle at 10% 0%,
+            rgba(59, 130, 246, 0.14),
+            transparent 34%
+        ),
+        radial-gradient(
+            circle at 100% 100%,
+            rgba(34, 197, 94, 0.09),
+            transparent 30%
+        ),
+        linear-gradient(
+            145deg,
+            rgba(15, 23, 42, 0.94),
+            rgba(3, 5, 10, 0.97)
+        );
+
+    box-shadow:
+        0 32px 90px rgba(0, 0, 0, 0.3);
+}
+
+
+.evidence-constellation::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 58px;
+
+    width: 105px;
+    height: 2px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #3B82F6,
+            #22C55E,
+            transparent
+        );
+
+    box-shadow:
+        0 0 22px rgba(59, 130, 246, 0.65);
+}
+
+
+/* Header */
+
+.evidence-constellation-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 40px;
+
+    margin-bottom: 45px;
+}
+
+
+.evidence-constellation-header
+> div:first-child {
+    max-width: 700px;
+}
+
+
+.evidence-constellation-eyebrow {
+    margin-bottom: 11px;
+
+    color: #60A5FA;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 0.17em;
+}
+
+
+.evidence-constellation-header h2 {
+    margin-bottom: 13px;
+
+    color: #F8FAFC;
+
+    font-size:
+        clamp(32px, 5vw, 49px);
+
+    line-height: 1.15;
+}
+
+
+.evidence-constellation-header
+> div:first-child
+> p:last-child {
+    color: #94A3B8;
+
+    font-size: 15px;
+    line-height: 1.75;
+}
+
+
+/* Filters */
+
+.evidence-domain-controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+
+    gap: 7px;
+}
+
+
+.evidence-domain-controls button {
+    min-height: 38px;
+
+    margin: 0;
+    padding: 9px 12px;
+
+    color: #64748B;
+
+    font-family: inherit;
+    font-size: 9px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.08);
+
+    border-radius: 999px;
+
+    background:
+        rgba(255, 255, 255, 0.025);
+}
+
+
+.evidence-domain-controls
+button[aria-pressed="true"] {
+    color: #FFFFFF;
+
+    border-color:
+        rgba(96, 165, 250, 0.5);
+
+    background:
+        rgba(37, 99, 235, 0.25);
+}
+
+
+/* Layout */
+
+.evidence-constellation-layout {
+    display: grid;
+    grid-template-columns:
+        minmax(0, 1.3fr)
+        minmax(310px, 0.7fr);
+
+    gap: clamp(24px, 5vw, 55px);
+}
+
+
+/* Visual field */
+
+.evidence-constellation-field {
+    min-height: 530px;
+
+    position: relative;
+    overflow: hidden;
+
+    border:
+        1px solid rgba(96, 165, 250, 0.1);
+
+    border-radius: 24px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(37, 99, 235, 0.08),
+            rgba(2, 6, 23, 0.46) 67%
+        );
+}
+
+
+.evidence-constellation-field::before {
+    content: "";
+
+    position: absolute;
+    inset: 9%;
+
+    border:
+        1px solid rgba(96, 165, 250, 0.1);
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 0 65px
+        rgba(96, 165, 250, 0.025),
+        0 0 0 130px
+        rgba(96, 165, 250, 0.018);
+}
+
+
+.evidence-constellation-field::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background-image:
+        linear-gradient(
+            rgba(96, 165, 250, 0.035) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(96, 165, 250, 0.035) 1px,
+            transparent 1px
+        );
+
+    background-size:
+        30px 30px;
+
+    mask-image:
+        radial-gradient(
+            circle at center,
+            black,
+            transparent 73%
+        );
+
+    pointer-events: none;
+}
+
+
+/* Central hub */
+
+.evidence-constellation-hub {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+
+    z-index: 2;
+
+    display: grid;
+    place-items: center;
+
+    width: 120px;
+    height: 120px;
+
+    text-align: center;
+
+    border:
+        1px solid rgba(96, 165, 250, 0.27);
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(37, 99, 235, 0.22),
+            rgba(2, 6, 23, 0.92)
+        );
+
+    box-shadow:
+        0 0 45px rgba(59, 130, 246, 0.12);
+
+    transform:
+        translate(-50%, -50%);
+}
+
+
+.evidence-constellation-hub span {
+    align-self: end;
+
+    color: #60A5FA;
+
+    font-size: 7px;
+    font-weight: 700;
+
+    letter-spacing: 0.15em;
+}
+
+
+.evidence-constellation-hub strong {
+    color: #FFFFFF;
+
+    font-size: 31px;
+    line-height: 1;
+}
+
+
+.evidence-constellation-hub small {
+    align-self: start;
+
+    color: #475569;
+
+    font-size: 6px;
+    font-weight: 700;
+
+    letter-spacing: 0.12em;
+}
+
+
+/* Evidence nodes */
+
+.evidence-node {
+    width: 48px;
+    height: 48px;
+
+    position: absolute;
+    left: var(--node-x);
+    top: var(--node-y);
+
+    z-index: 4;
+
+    display: grid;
+    place-items: center;
+
+    margin: 0;
+    padding: 0;
+
+    color: #BFDBFE;
+
+    font-family: inherit;
+    font-size: 9px;
+    font-weight: 800;
+
+    cursor: pointer;
+
+    border:
+        1px solid rgba(96, 165, 250, 0.32);
+
+    border-radius: 50%;
+
+    background:
+        rgba(15, 23, 42, 0.94);
+
+    box-shadow:
+        0 0 0 6px rgba(59, 130, 246, 0.035),
+        0 0 22px rgba(59, 130, 246, 0.1);
+
+    transform:
+        translate(-50%, -50%);
+
+    transition:
+        opacity 0.35s ease,
+        transform 0.35s ease,
+        color 0.35s ease,
+        border-color 0.35s ease,
+        background 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+
+.evidence-node:hover,
+.evidence-node-selected {
+    color: #FFFFFF;
+
+    border-color:
+        rgba(34, 197, 94, 0.65);
+
+    background:
+        rgba(22, 163, 74, 0.28);
+
+    box-shadow:
+        0 0 0 8px rgba(34, 197, 94, 0.06),
+        0 0 27px rgba(34, 197, 94, 0.22);
+
+    transform:
+        translate(-50%, -50%)
+        scale(1.14);
+}
+
+
+.evidence-node-filtered {
+    opacity: 0.1;
+
+    pointer-events: none;
+
+    transform:
+        translate(-50%, -50%)
+        scale(0.78);
+}
+
+
+.evidence-node:focus-visible {
+    outline:
+        3px solid rgba(134, 239, 172, 0.75);
+
+    outline-offset: 5px;
+}
+
+
+/* Insight panel */
+
+.evidence-insight-panel {
+    padding: clamp(23px, 4vw, 35px);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.085);
+
+    border-radius: 22px;
+
+    background:
+        rgba(2, 6, 23, 0.38);
+}
+
+
+.evidence-insight-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding-bottom: 17px;
+
+    border-bottom:
+        1px solid rgba(255, 255, 255, 0.075);
+}
+
+
+.evidence-insight-top span {
+    color: #60A5FA;
+
+    font-size: 8px;
+    font-weight: 700;
+
+    letter-spacing: 0.15em;
+}
+
+
+.evidence-insight-top strong {
+    color: #475569;
+
+    font-size: 9px;
+}
+
+
+#evidenceInsightType {
+    margin-top: 26px;
+
+    color: #65F3A5;
+
+    font-size: 9px;
+    font-weight: 700;
+
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+
+.evidence-insight-panel h3 {
+    margin-top: 9px;
+
+    color: #F8FAFC;
+
+    font-size:
+        clamp(25px, 4vw, 35px);
+
+    line-height: 1.15;
+}
+
+
+#evidenceInsightSummary {
+    margin-top: 17px;
+
+    color: #94A3B8;
+
+    font-size: 13px;
+    line-height: 1.75;
+}
+
+
+/* Domain indicators */
+
+.evidence-insight-domains {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 7px;
+
+    margin-top: 23px;
+}
+
+
+.evidence-insight-domains span {
+    padding: 7px 9px;
+
+    color: #475569;
+
+    font-size: 8px;
+    font-weight: 700;
+
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.07);
+
+    border-radius: 999px;
+
+    background:
+        rgba(255, 255, 255, 0.02);
+}
+
+
+.evidence-insight-domains span.active {
+    color: #BFDBFE;
+
+    border-color:
+        rgba(96, 165, 250, 0.32);
+
+    background:
+        rgba(59, 130, 246, 0.09);
+}
+
+
+/* Node key */
+
+.evidence-insight-key {
+    margin-top: 30px;
+    padding-top: 22px;
+
+    border-top:
+        1px solid rgba(255, 255, 255, 0.075);
+}
+
+
+.evidence-insight-key > p {
+    margin-bottom: 13px;
+
+    color: #475569;
+
+    font-size: 8px;
+    font-weight: 700;
+
+    letter-spacing: 0.14em;
+}
+
+
+.evidence-insight-key dl {
+    display: grid;
+
+    gap: 9px;
+}
+
+
+.evidence-insight-key dl > div {
+    display: grid;
+    grid-template-columns: 36px 1fr;
+
+    gap: 9px;
+}
+
+
+.evidence-insight-key dt {
+    color: #93C5FD;
+
+    font-size: 8px;
+    font-weight: 700;
+}
+
+
+.evidence-insight-key dd {
+    margin: 0;
+
+    color: #64748B;
+
+    font-size: 9px;
+}
+
+
+/* Tablet */
+
+@media(max-width: 900px){
+
+    .evidence-constellation-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+
+    .evidence-domain-controls {
+        justify-content: flex-start;
+    }
+
+
+    .evidence-constellation-layout {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* Mobile: convert constellation into a grid */
+
+@media(max-width: 650px){
+
+    .evidence-constellation {
+        width: 92%;
+
+        padding: 30px 20px;
+
+        border-radius: 23px;
+    }
+
+
+    .evidence-constellation::before {
+        left: 20px;
+    }
+
+
+    .evidence-domain-controls {
+        display: grid;
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        width: 100%;
+    }
+
+
+    .evidence-domain-controls button {
+        width: 100%;
+
+        border-radius: 11px;
+    }
+
+
+    .evidence-constellation-field {
+        display: grid;
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+
+        gap: 10px;
+
+        min-height: 0;
+
+        padding: 18px;
+    }
+
+
+    .evidence-constellation-field::before,
+    .evidence-constellation-field::after,
+    .evidence-constellation-hub {
+        display: none;
+    }
+
+
+    .evidence-node {
+        width: 100%;
+        height: 52px;
+
+        position: static;
+
+        border-radius: 13px;
+
+        transform: none;
+    }
+
+
+    .evidence-node:hover,
+    .evidence-node-selected {
+        transform:
+            translateY(-2px);
+    }
+
+
+    .evidence-node-filtered {
+        display: none;
+
+        transform: none;
+    }
+
+}
+
+
+/* Accessibility */
+
+@media(prefers-reduced-motion: reduce){
+
+    .evidence-node {
+        transition: none;
+    }
+
+}
+
+
+html[data-user-motion="calm"]
+.evidence-node {
+    transition: none;
+}
+/* Prevent global button effects from breaking the constellation */
+
+.evidence-domain-controls button {
+    transform: none !important;
+}
+
+
+.evidence-node {
+    transform:
+        translate(-50%, -50%) !important;
+}
+
+
+.evidence-node:hover,
+.evidence-node.evidence-node-selected {
+    transform:
+        translate(-50%, -50%)
+        scale(1.14) !important;
+}
+
+
+.evidence-node.evidence-node-filtered {
+    transform:
+        translate(-50%, -50%)
+        scale(0.78) !important;
+}
+
+
+@media(max-width: 650px){
+
+    .evidence-node {
+        transform: none !important;
+    }
+
+
+    .evidence-node:hover,
+    .evidence-node.evidence-node-selected {
+        transform:
+            translateY(-2px) !important;
+    }
+
+
+    .evidence-node.evidence-node-filtered {
+        transform: none !important;
+    }
+
+}
+>>>>>>> eb69bdb4dda774a4d4c353d302a6becab1a27222

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 
@@ -875,3 +876,882 @@ View my profile
 </body>
 
 </html>
+=======
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+    try {
+        if (sessionStorage.getItem("msa-welcome-seen") === "true") {
+            document.documentElement.classList.add("welcome-already-seen");
+        }
+    } catch (error) {
+        /* Continue normally if storage is unavailable. */
+    }
+</script>
+
+<title>Contact | Muhammad Subhan</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+    <nav
+    class="section-constellation"
+    id="sectionConstellation"
+    aria-label="Page sections"
+    style="
+        position: fixed !important;
+        left: auto !important;
+        right: 32px !important;
+        top: 50% !important;
+        width: 12px !important;
+        min-width: 12px !important;
+        max-width: 12px !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        transform: translateY(-50%) !important;
+    "
+></nav>
+
+<!-- =========================================
+     FIRST-VISIT CINEMATIC WELCOME
+========================================== -->
+<section
+    class="cinematic-welcome"
+    id="cinematicWelcome"
+    aria-label="Welcome introduction"
+>
+    <div
+        class="cinematic-welcome__atmosphere"
+        aria-hidden="true"
+    >
+        <div class="cinematic-welcome__glow"></div>
+        <div class="cinematic-welcome__grid"></div>
+        <div class="cinematic-welcome__grain"></div>
+
+        <span class="cinematic-welcome__flight-line"></span>
+        <span class="cinematic-welcome__flight-dot"></span>
+    </div>
+
+    <button
+        class="cinematic-welcome__skip"
+        id="cinematicWelcomeSkip"
+        type="button"
+        aria-label="Skip welcome introduction"
+    >
+        Skip intro
+    </button>
+
+    <div
+    class="cinematic-welcome__atmosphere"
+    aria-hidden="true"
+>
+    <div class="cinematic-welcome__glow"></div>
+    <div class="cinematic-welcome__grid"></div>
+    <div class="cinematic-welcome__grain"></div>
+
+    <span class="cinematic-welcome__flight-line"></span>
+    <span class="cinematic-welcome__flight-dot"></span>
+</div>
+
+<button
+    class="cinematic-welcome__skip"
+    id="cinematicWelcomeSkip"
+    type="button"
+    aria-label="Skip welcome introduction"
+    onclick="
+        const welcome = this.closest('.cinematic-welcome');
+        welcome.classList.add('is-leaving');
+        sessionStorage.setItem('msa-welcome-seen', 'true');
+        document.body.classList.remove('cinematic-welcome-active');
+
+        setTimeout(() => {
+            document.documentElement.classList.add('welcome-already-seen');
+            welcome.remove();
+        }, 1400);
+    "
+>
+    Skip intro
+</button>
+
+<div class="cinematic-welcome__content">
+
+    <div class="cinematic-welcome__content">
+
+        <p class="cinematic-welcome__opening">
+            Every journey begins long before takeoff.
+        </p>
+
+        <div class="cinematic-welcome__identity">
+
+            <p class="cinematic-welcome__eyebrow">
+                THE JOURNEY OF
+            </p>
+
+            <h1>
+                <span>Muhammad</span>
+                <span>Subhan</span>
+            </h1>
+
+        </div>
+
+        <p class="cinematic-welcome__fields">
+            Aviation
+            <span aria-hidden="true">•</span>
+            Technology
+            <span aria-hidden="true">•</span>
+            Purpose
+        </p>
+
+        <p class="cinematic-welcome__closing">
+            This is the story of where I am going.
+        </p>
+
+    </div>
+
+    <div
+        class="cinematic-welcome__exit"
+        aria-hidden="true"
+    ></div>
+</section>
+
+    <div class="custom-cursor"></div>
+    <div class="custom-cursor-dot"></div>
+
+    <div class="page-transition">
+        <div class="page-loading-bar"></div>
+    </div>
+
+
+    <div class="page-scroll-progress" aria-hidden="true">
+        <div class="page-scroll-progress-fill"></div>
+    </div>
+
+<nav>
+
+<div class="logo">
+Muhammad Subhan
+</div>
+
+<button
+    class="menu-toggle"
+    type="button"
+    aria-label="Open navigation menu"
+    aria-expanded="false"
+    aria-controls="primary-navigation"
+>
+    <span aria-hidden="true">☰</span>
+</button>
+
+<ul class="nav-links" id="primary-navigation">
+
+    <li><a href="index.html">Home</a></li>
+    
+    <li><a href="about.html">About Me</a></li>
+    
+    <li><a href="timeline.html">Journey</a></li>
+    
+    <li><a href="skills.html">Skills</a></li>
+    
+    <li><a href="certification.html">Certifications</a></li>
+    
+    <li><a href="contact.html">Contact</a></li>
+
+</ul>
+
+</nav>
+
+
+
+
+<section class="contact-hero">
+
+<p class="tag">
+CONTACT
+</p>
+
+
+<h1>
+Let's Connect
+</h1>
+
+
+<p>
+Interested in aviation, technology, and future opportunities?
+Feel free to reach out.
+</p>
+
+</section>
+
+
+<!-- =========================================
+     CONNECTION BRIEF COMPOSER
+========================================== -->
+<section
+    class="connection-brief"
+    aria-labelledby="connectionBriefTitle"
+>
+
+    <div class="connection-brief-header">
+
+        <p class="connection-brief-eyebrow">
+            PURPOSEFUL CONNECTIONS
+        </p>
+
+        <h2 id="connectionBriefTitle">
+            Start with the right context
+        </h2>
+
+        <p>
+            Choose the reason you are reaching out. I’ll prepare a
+            useful email structure so your message starts with the
+            information that matters.
+        </p>
+
+    </div>
+
+
+    <div class="connection-brief-layout">
+
+        <div
+            class="connection-topics"
+            role="group"
+            aria-label="Choose a reason for contacting Muhammad Subhan"
+        >
+
+            <button
+                type="button"
+                class="connection-topic"
+                data-connection-topic="aviation"
+                aria-pressed="false"
+            >
+
+                <span class="connection-topic-number">
+                    01
+                </span>
+
+                <span>
+                    <strong>
+                        Aviation & Training
+                    </strong>
+
+                    <small>
+                        Courses, pilot pathways and aviation knowledge
+                    </small>
+                </span>
+
+                <span
+                    class="connection-topic-arrow"
+                    aria-hidden="true"
+                >
+                    →
+                </span>
+
+            </button>
+
+
+            <button
+                type="button"
+                class="connection-topic"
+                data-connection-topic="networking"
+                aria-pressed="false"
+            >
+
+                <span class="connection-topic-number">
+                    02
+                </span>
+
+                <span>
+                    <strong>
+                        Events & Networking
+                    </strong>
+
+                    <small>
+                        Conferences, communities and professional events
+                    </small>
+                </span>
+
+                <span
+                    class="connection-topic-arrow"
+                    aria-hidden="true"
+                >
+                    →
+                </span>
+
+            </button>
+
+
+            <button
+                type="button"
+                class="connection-topic"
+                data-connection-topic="technology"
+                aria-pressed="false"
+            >
+
+                <span class="connection-topic-number">
+                    03
+                </span>
+
+                <span>
+                    <strong>
+                        Technology & Projects
+                    </strong>
+
+                    <small>
+                        Websites, systems and shared interests
+                    </small>
+                </span>
+
+                <span
+                    class="connection-topic-arrow"
+                    aria-hidden="true"
+                >
+                    →
+                </span>
+
+            </button>
+
+
+            <button
+                type="button"
+                class="connection-topic"
+                data-connection-topic="general"
+                aria-pressed="true"
+            >
+
+                <span class="connection-topic-number">
+                    04
+                </span>
+
+                <span>
+                    <strong>
+                        General Message
+                    </strong>
+
+                    <small>
+                        Questions, feedback or introductions
+                    </small>
+                </span>
+
+                <span
+                    class="connection-topic-arrow"
+                    aria-hidden="true"
+                >
+                    →
+                </span>
+
+            </button>
+
+        </div>
+
+
+        <article
+            class="connection-preview"
+            aria-live="polite"
+        >
+
+            <div class="connection-preview-top">
+
+                <span>
+                    MESSAGE BRIEF
+                </span>
+
+                <strong id="connectionBriefNumber">
+                    04
+                </strong>
+
+            </div>
+
+
+            <h3 id="connectionPreviewTitle">
+                General Message
+            </h3>
+
+
+            <p id="connectionPreviewDescription">
+                For questions, feedback or a professional introduction
+                that does not fit another category.
+            </p>
+
+
+            <div class="connection-checklist">
+
+                <p>
+                    Helpful information to include
+                </p>
+
+                <ul id="connectionChecklist">
+
+                    <li>Your name and how you found my portfolio</li>
+
+                    <li>The reason for your message</li>
+
+                    <li>Any relevant context or question</li>
+
+                </ul>
+
+            </div>
+
+
+            <a
+                href="mailto:subhan.ahmadbaqa@gmail.com"
+                class="connection-email-button"
+                id="connectionEmailButton"
+            >
+
+                <span>
+                    Prepare email
+                </span>
+
+                <span aria-hidden="true">
+                    ↗
+                </span>
+
+            </a>
+
+
+            <p class="connection-privacy-note">
+
+                <span aria-hidden="true">◇</span>
+
+                Nothing is submitted through this website. Your email
+                application will open with an editable draft.
+
+            </p>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<section class="contact-grid">
+
+
+
+<div class="contact-card">
+
+<div class="contact-icon">
+✉️
+</div>
+
+
+<h2>
+Email
+</h2>
+
+
+<p>
+    <a href="mailto:subhan.ahmadbaqa@gmail.com">
+    subhan.ahmadbaqa@gmail.com
+    </a>
+    </p>
+
+</div>
+
+
+
+
+
+<div class="contact-card">
+
+<div class="contact-icon">
+🔗
+</div>
+
+
+<h2>
+LinkedIn
+</h2>
+
+
+<p>
+
+    <a
+    href="https://www.linkedin.com/in/ms910"
+    target="_blank"
+    rel="noopener noreferrer"
+>
+View my profile
+</a>
+
+</p>
+
+</div>
+
+
+
+
+
+
+
+
+</section>
+
+<div class="command-palette">
+
+    <div class="command-box">
+
+        <input
+            type="text"
+            id="commandInput"
+            placeholder="Search pages... (Ctrl + K)"
+            autocomplete="off"
+        >
+
+        <div class="command-results">
+
+            <a href="index.html">🏠 Home</a>
+            <a href="about.html">👤 About Me</a>
+            <a href="timeline.html">🛫 Journey</a>
+            <a href="skills.html">💡 Skills</a>
+            <a href="certifications.html">🏆 Certifications</a>
+            <a href="contact.html">✉️ Contact</a>
+
+        </div>
+
+    </div>
+
+</div>
+
+<button
+    class="back-to-top progress-return"
+    type="button"
+    aria-label="Back to top — 0% through page"
+    data-progress-return
+>
+    <svg
+        class="progress-return__ring"
+        viewBox="0 0 48 48"
+        aria-hidden="true"
+    >
+        <circle
+            class="progress-return__track"
+            cx="24"
+            cy="24"
+            r="21"
+        ></circle>
+
+        <circle
+            class="progress-return__value"
+            cx="24"
+            cy="24"
+            r="21"
+        ></circle>
+    </svg>
+
+    <span class="progress-return__arrow" aria-hidden="true">
+        ↑
+    </span>
+
+    <span class="progress-return__percentage" aria-hidden="true">
+        0%
+    </span>
+</button>
+
+<script src="js/script.js"></script>
+<script src="js/contact.js"></script>
+<script src="js/scroll-return.js"></script>
+
+
+<!-- =========================================
+     PROFESSIONAL SITE FOOTER
+========================================== -->
+<footer class="site-footer">
+
+    <div class="site-footer-inner">
+
+        <!-- PRIMARY FOOTER INFORMATION -->
+
+        <div class="site-footer-main">
+
+            <div class="site-footer-brand">
+
+                <a
+                    href="index.html"
+                    class="site-footer-identity"
+                    aria-label="Muhammad Subhan homepage"
+                >
+
+                    <span class="site-footer-monogram">
+                        MS
+                    </span>
+
+
+                    <span>
+
+                        <strong>
+                            Muhammad Subhan
+                        </strong>
+
+                        <small>
+                            Personal Portfolio
+                        </small>
+
+                    </span>
+
+                </a>
+
+
+                <p>
+                    An aspiring commercial pilot documenting an
+                    evolving journey through education, aviation,
+                    technology and continuous development.
+                </p>
+
+
+                <div class="site-footer-location">
+
+                    <span aria-hidden="true"></span>
+
+                    Based in Riyadh, Saudi Arabia
+
+                </div>
+
+            </div>
+
+
+            <!-- FOOTER NAVIGATION -->
+
+            <nav
+                class="site-footer-navigation"
+                aria-label="Footer navigation"
+            >
+
+                <div>
+
+                    <p>
+                        EXPLORE
+                    </p>
+
+                    <a href="about.html">
+                        About Me
+                    </a>
+
+                    <a href="timeline.html">
+                        Journey
+                    </a>
+
+                    <a href="skills.html">
+                        Skills
+                    </a>
+
+                </div>
+
+
+                <div>
+
+                    <p>
+                        EVIDENCE
+                    </p>
+
+                    <a href="certification.html">
+                        Certifications
+                    </a>
+
+                    <a href="certification.html#experiences">
+                        Experiences
+                    </a>
+
+                    <a href="contact.html">
+                        Contact
+                    </a>
+
+                </div>
+
+
+                <div>
+
+                    <p>
+                        CONNECT
+                    </p>
+
+                    <a href="mailto:subhan.ahmadbaqa@gmail.com">
+                        Email
+                    </a>
+
+                    <a
+                        href="https://www.linkedin.com/in/ms910"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        LinkedIn
+
+                        <span aria-hidden="true">
+                            ↗
+                        </span>
+
+                    </a>
+
+                </div>
+
+            </nav>
+
+
+            <!-- CURRENT STATUS -->
+
+            <aside
+                class="site-footer-status"
+                aria-label="Current portfolio status"
+            >
+
+                <div class="site-footer-status-heading">
+
+                    <span aria-hidden="true"></span>
+
+                    CURRENTLY PROGRESSING
+
+                </div>
+
+
+                <h2>
+                    Preparing for the next academic stage
+                </h2>
+
+
+                <p>
+                    IGCSE examinations completed. The next checkpoint
+                    is Grade 11, with a long-term direction toward
+                    professional aviation.
+                </p>
+
+
+                <dl>
+
+                    <div>
+
+                        <dt>
+                            Current stage
+                        </dt>
+
+                        <dd>
+                            IGCSE Complete
+                        </dd>
+
+                    </div>
+
+
+                    <div>
+
+                        <dt>
+                            Next checkpoint
+                        </dt>
+
+                        <dd>
+                            Grade 11
+                        </dd>
+
+                    </div>
+
+
+                    <div>
+
+                        <dt>
+                            Direction
+                        </dt>
+
+                        <dd>
+                            Commercial Aviation
+                        </dd>
+
+                    </div>
+
+                </dl>
+
+            </aside>
+
+        </div>
+
+
+        <!-- CONTACT HANDOFF -->
+
+        <div class="site-footer-handoff">
+
+            <div>
+
+                <p>
+                    RELEVANT OPPORTUNITY OR CONVERSATION?
+                </p>
+
+                <h2>
+                    Let’s start with the right context.
+                </h2>
+
+            </div>
+
+
+            <a href="contact.html">
+
+                <span>
+                    Prepare a message
+                </span>
+
+                <span aria-hidden="true">
+                    →
+                </span>
+
+            </a>
+
+        </div>
+
+
+        <!-- LEGAL / META ROW -->
+
+        <div class="site-footer-bottom">
+
+            <p>
+                © 2026 Muhammad Subhan
+            </p>
+
+
+            <p>
+                Designed and built as an evolving personal portfolio
+            </p>
+
+
+            <p>
+
+                <span aria-hidden="true"></span>
+
+                Last reviewed July 2026
+
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+<!-- Connection Status Indicator -->
+<div
+    class="connection-status"
+    id="connectionStatus"
+    role="status"
+    aria-live="polite"
+    aria-hidden="true"
+>
+    <span
+        class="connection-status__dot"
+        aria-hidden="true"
+    ></span>
+
+    <span id="connectionStatusText">
+        Connection lost
+    </span>
+</div>
+
+</body>
+
+</html>
+>>>>>>> eb69bdb4dda774a4d4c353d302a6becab1a27222
