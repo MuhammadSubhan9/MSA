@@ -1,0 +1,1160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+    try {
+        if (sessionStorage.getItem("msa-welcome-seen") === "true") {
+            document.documentElement.classList.add("welcome-already-seen");
+        }
+    } catch (error) {
+        /* Continue normally if storage is unavailable. */
+    }
+</script>
+
+
+
+<title>About Me | Muhammad Subhan</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+    <nav
+    class="section-constellation"
+    id="sectionConstellation"
+    aria-label="Page sections"
+    style="
+        position: fixed !important;
+        left: auto !important;
+        right: 32px !important;
+        top: 50% !important;
+        width: 12px !important;
+        min-width: 12px !important;
+        max-width: 12px !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        transform: translateY(-50%) !important;
+    "
+></nav> 
+
+    <!-- =========================================
+     FIRST-VISIT CINEMATIC WELCOME
+========================================== -->
+<section
+class="cinematic-welcome"
+id="cinematicWelcome"
+aria-label="Welcome introduction"
+>
+<div
+    class="cinematic-welcome__atmosphere"
+    aria-hidden="true"
+>
+    <div class="cinematic-welcome__glow"></div>
+    <div class="cinematic-welcome__grid"></div>
+    <div class="cinematic-welcome__grain"></div>
+
+    <span class="cinematic-welcome__flight-line"></span>
+    <span class="cinematic-welcome__flight-dot"></span>
+</div>
+
+<button
+    class="cinematic-welcome__skip"
+    id="cinematicWelcomeSkip"
+    type="button"
+    aria-label="Skip welcome introduction"
+    onclick="
+        const welcome = this.closest('.cinematic-welcome');
+        welcome.classList.add('is-leaving');
+        sessionStorage.setItem('msa-welcome-seen', 'true');
+        document.body.classList.remove('cinematic-welcome-active');
+
+        setTimeout(() => {
+            document.documentElement.classList.add('welcome-already-seen');
+            welcome.remove();
+        }, 1400);
+    "
+>
+    Skip intro
+</button>
+
+<div class="cinematic-welcome__content">
+
+    <p class="cinematic-welcome__opening">
+        Every journey begins long before takeoff.
+    </p>
+
+    <div class="cinematic-welcome__identity">
+
+        <p class="cinematic-welcome__eyebrow">
+            THE JOURNEY OF
+        </p>
+
+        <h1>
+            <span>Muhammad</span>
+            <span>Subhan</span>
+        </h1>
+
+    </div>
+
+    <p class="cinematic-welcome__fields">
+        Aviation
+        <span aria-hidden="true">•</span>
+        Technology
+        <span aria-hidden="true">•</span>
+        Purpose
+    </p>
+
+    <p class="cinematic-welcome__closing">
+        This is the story of where I am going.
+    </p>
+
+</div>
+
+<div
+    class="cinematic-welcome__exit"
+    aria-hidden="true"
+></div>
+</section>
+
+    <div class="custom-cursor"></div>
+    <div class="custom-cursor-dot"></div>
+    
+    <div class="page-transition">
+        <div class="page-loading-bar"></div>
+    </div>
+
+    <div class="page-scroll-progress" aria-hidden="true">
+        <div class="page-scroll-progress-fill"></div>
+    </div>
+
+<nav>
+
+<div class="logo">
+Muhammad Subhan
+</div>
+
+
+<button
+    class="menu-toggle"
+    type="button"
+    aria-label="Open navigation menu"
+    aria-expanded="false"
+    aria-controls="primary-navigation"
+>
+    <span aria-hidden="true">☰</span>
+</button>
+
+
+<ul class="nav-links" id="primary-navigation">
+
+    <li><a href="index.html">Home</a></li>
+    
+    <li><a href="about.html">About Me</a></li>
+    
+    <li><a href="timeline.html">Journey</a></li>
+    
+    <li><a href="skills.html">Skills</a></li>
+    
+    <li><a href="certification.html">Certifications</a></li>
+    
+    <li><a href="contact.html">Contact</a></li>
+
+</ul>
+
+</nav>
+
+
+
+<section class="about-page">
+
+
+<!-- =========================================
+     SIGNATURE IDENTITY PORTRAIT
+========================================== -->
+<div class="about-image identity-portrait">
+
+    <div class="identity-portrait-frame">
+
+        <img
+            src="images/ProfileP.jpeg"
+            alt="Portrait of Muhammad Subhan"
+        >
+
+
+        <div
+            class="identity-portrait-grid"
+            aria-hidden="true"
+        ></div>
+
+
+        <div class="identity-portrait-status">
+
+            <span aria-hidden="true"></span>
+
+            ACTIVE JOURNEY
+
+        </div>
+
+
+        <div class="identity-portrait-index">
+
+            <span>
+                MSA
+            </span>
+
+            <strong>
+                PROFILE / 01
+            </strong>
+
+        </div>
+
+
+        <div class="identity-portrait-coordinate">
+
+            <span>
+                24.7136° N
+            </span>
+
+            <span>
+                46.6753° E
+            </span>
+
+        </div>
+
+
+        <div class="identity-portrait-nameplate">
+
+            <p>
+                ASPIRING COMMERCIAL PILOT
+            </p>
+
+            <h2>
+                Muhammad Subhan
+            </h2>
+
+            <div>
+
+                <span>
+                    Riyadh, Saudi Arabia
+                </span>
+
+                <span>
+                    2026
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div
+            class="identity-portrait-scan"
+            aria-hidden="true"
+        ></div>
+
+
+        <span
+            class="identity-corner identity-corner-top-left"
+            aria-hidden="true"
+        ></span>
+
+        <span
+            class="identity-corner identity-corner-top-right"
+            aria-hidden="true"
+        ></span>
+
+        <span
+            class="identity-corner identity-corner-bottom-left"
+            aria-hidden="true"
+        ></span>
+
+        <span
+            class="identity-corner identity-corner-bottom-right"
+            aria-hidden="true"
+        ></span>
+
+    </div>
+
+
+    <div class="identity-portrait-caption">
+
+        <div>
+
+            <span>
+                CURRENT FOCUS
+            </span>
+
+            <strong>
+                Aviation Education
+            </strong>
+
+        </div>
+
+
+        <div>
+
+            <span>
+                STATUS
+            </span>
+
+            <strong>
+                Progressing
+            </strong>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<div class="about-content">
+
+    <p class="tag">
+        ABOUT ME
+    </p>
+
+    <h1>
+        My Story
+    </h1>
+
+    <p class="about-intro">
+        My name is <strong>Muhammad Subhan</strong>, and I am an
+        <abbr
+            class="msa-term"
+            data-msa-term="igcse"
+            tabindex="0"
+        >
+            IGCSE
+        </abbr>
+        student
+        based in Riyadh, Saudi Arabia. While many people know me as someone who
+        enjoys aviation, what truly drives me is something broader: a desire to
+        understand how complex systems work, why they work the way they do, and
+        how they can continually be improved.
+    </p>
+
+    <p class="about-intro">
+        That curiosity has shaped the way I approach almost everything I do.
+        Whether I am studying for school, attending an industry event,
+        completing an online certification, researching a topic that interests
+        me, or building this website, I rarely stop after finding the answer to
+        a question. I usually find myself asking another question, then another,
+        until I understand not only what something is, but why it exists and how
+        it fits into the bigger picture.
+    </p>
+
+</div>
+
+</section>
+
+
+<!-- =========================================
+     ABOUT PAGE READING MODE
+========================================== -->
+<section
+    class="about-reading-mode"
+    aria-labelledby="aboutReadingTitle"
+>
+
+    <div class="about-reading-copy">
+
+        <p class="about-reading-eyebrow">
+            CHOOSE YOUR READING EXPERIENCE
+        </p>
+
+        <h2 id="aboutReadingTitle">
+            The short version or the complete story?
+        </h2>
+
+        <p id="aboutReadingDescription">
+            Full Story is currently showing the complete narrative.
+        </p>
+
+    </div>
+
+
+    <div
+        class="about-reading-controls"
+        role="group"
+        aria-label="Choose how much information to display"
+    >
+
+        <button
+            type="button"
+            data-about-reading="scan"
+            aria-pressed="false"
+        >
+            <span aria-hidden="true">⌁</span>
+
+            <span>
+                <strong>Quick Scan</strong>
+                <small>Essential points only</small>
+            </span>
+        </button>
+
+
+        <button
+            type="button"
+            data-about-reading="full"
+            aria-pressed="true"
+        >
+            <span aria-hidden="true">≡</span>
+
+            <span>
+                <strong>Full Story</strong>
+                <small>Complete narrative</small>
+            </span>
+        </button>
+
+    </div>
+
+</section>
+
+
+<section class="about-details">
+
+    <article
+    class="about-section"
+    id="about-aviation"
+    data-story-chapter="Why Aviation?"
+    data-msa-share
+
+>
+
+        <div class="about-section-number">
+            01
+        </div>
+
+        <div class="about-section-content">
+
+            <h2>
+                Why Aviation?
+            </h2>
+
+            <p>
+                Aviation became the place where all of my interests naturally
+                came together.
+            </p>
+
+            <p>
+                To many people, aviation begins and ends with an aircraft taking
+                off and landing. For me, that is only the visible outcome of
+                thousands of people, technologies, decisions, and processes
+                working together with extraordinary precision.
+            </p>
+
+            <p>
+                Every flight represents engineering, operations, maintenance,
+                meteorology, navigation, communication, safety, leadership, and
+                teamwork, all operating to an incredibly high standard. That
+                level of coordination is something I have always admired.
+            </p>
+
+            <p>
+                My interest has never been limited to the cockpit alone. While
+                becoming a commercial pilot is my long-term goal, I also want to
+                understand the wider industry surrounding aviation.
+            </p>
+
+            <p>
+                I enjoy learning about aircraft systems, airport operations,
+                airline management, flight planning, aviation safety, emerging
+                technologies, and the innovations shaping the future of global
+                air travel.
+            </p>
+
+            <blockquote>
+                The simplest answer is that aviation never stopped challenging me.
+            </blockquote>
+
+            <p>
+                Many interests fade with time. Mine became stronger. The more I
+                learned about aircraft, the more I wanted to understand the
+                systems behind them. Learning about systems led me to operations.
+                Operations led me to airports. Airports led me to airline
+                strategy, safety, engineering, and the decisions that allow
+                millions of passengers to travel safely every day.
+            </p>
+
+            <p>
+                Instead of satisfying my curiosity, every answer created new
+                questions. That is why aviation has remained such a significant
+                part of my life.
+            </p>
+
+        </div>
+
+    </article>
+
+
+
+    <article
+    class="about-section"
+    id="about-thinking"
+    data-story-chapter="How I Think"
+    data-msa-share
+
+>
+
+        <div class="about-section-number">
+            02
+        </div>
+
+        <div class="about-section-content">
+
+            <h2>
+                How I Think
+            </h2>
+
+            <p>
+                I believe curiosity is one of the most valuable qualities a
+                person can develop. It is easy to memorise information. It is
+                much harder, and much more rewarding, to understand why
+                something works.
+            </p>
+
+            <p>
+                Whenever I study a new topic, I naturally find myself exploring
+                beyond what is required. I enjoy analysing systems, identifying
+                connections between ideas, and understanding the reasoning
+                behind decisions.
+            </p>
+
+            <p>
+                That mindset influences the way I learn, solve problems, and
+                approach challenges. I prefer understanding the full picture
+                rather than memorising isolated facts.
+            </p>
+
+        </div>
+
+    </article>
+
+
+
+    <article
+    class="about-section"
+    id="about-learning"
+    data-story-chapter="Continuous Learning"
+    data-msa-share
+
+>
+
+        <div class="about-section-number">
+            03
+        </div>
+
+        <div class="about-section-content">
+
+            <h2>
+                Continuous Learning
+            </h2>
+
+            <p>
+                Outside school, I actively look for opportunities to continue
+                learning. I complete online courses, attend conferences and
+                industry events whenever possible, follow developments in
+                aviation, and build personal projects that allow me to apply
+                what I have learned.
+            </p>
+
+            <p>
+                Every experience adds another piece to my understanding and
+                reminds me that meaningful progress comes from consistent effort
+                rather than occasional moments of motivation.
+            </p>
+
+            <p>
+                I have learned that growth is rarely dramatic. More often, it is
+                built through small improvements repeated over long periods of
+                time.
+            </p>
+
+            <p>
+                I try to become a little better each day, whether by learning a
+                new concept, improving an existing skill, or challenging myself
+                to think differently. I do not expect success to happen
+                overnight, and I do not believe there is a shortcut to genuine
+                achievement.
+            </p>
+
+        </div>
+
+    </article>
+
+
+
+    <article
+    class="about-section"
+    id="about-professional"
+    data-story-chapter="Professional Direction"
+    data-msa-share
+
+>
+
+        <div class="about-section-number">
+            04
+        </div>
+
+        <div class="about-section-content">
+
+            <h2>
+                The Professional I Want to Become
+            </h2>
+
+            <p>
+                The qualities I try to develop extend beyond technical
+                knowledge. Aviation is an industry built on professionalism,
+                discipline, communication, teamwork, responsibility, and sound
+                judgement.
+            </p>
+
+            <p>
+                These are not qualities that suddenly appear when someone begins
+                flying professionally. They are habits developed long before
+                that point.
+            </p>
+
+            <p>
+                I place just as much importance on building my character as I do
+                on building my knowledge. I want to become someone who approaches
+                responsibility calmly, communicates clearly, works effectively
+                with others, and never stops learning.
+            </p>
+
+        </div>
+
+    </article>
+
+
+
+    <article
+    class="about-section"
+    id="about-future"
+    data-story-chapter="Looking Ahead"
+    data-msa-share
+
+>
+
+        <div class="about-section-number">
+            05
+        </div>
+
+        <div class="about-section-content">
+
+            <h2>
+                Looking Ahead
+            </h2>
+
+            <p>
+                My long-term goal is clear: I want to become a commercial pilot.
+            </p>
+
+            <p>
+                However, I hope that my career will represent more than a job
+                title. I want to be recognised as someone who approaches every
+                responsibility with professionalism, remains calm under
+                pressure, continues learning, and consistently strives to
+                improve.
+            </p>
+
+            <p>
+                I want to contribute positively to every organisation I become
+                part of, not only through technical competence but also through
+                integrity, teamwork, and a willingness to help others succeed.
+            </p>
+
+            <p>
+                I know that I am still at the beginning of my journey. There is
+                still an enormous amount to learn, countless experiences to
+                gain, and many challenges to overcome.
+            </p>
+
+            <p>
+                Rather than seeing that as intimidating, I find it exciting.
+                Every milestone ahead represents another opportunity to grow,
+                develop new skills, and become a better version of myself.
+            </p>
+
+        </div>
+
+    </article>
+
+
+
+    <article
+    class="about-section"
+    id="about-website"
+    data-story-chapter="Why This Website Exists"
+    data-msa-share
+
+>
+
+        <div class="about-section-number">
+            06
+        </div>
+
+        <div class="about-section-content">
+
+            <h2>
+                Why This Website Exists
+            </h2>
+
+            <p>
+                This website is not intended to present a finished story or
+                suggest that I have already achieved my ambitions.
+            </p>
+
+            <p>
+                It documents the beginning of a journey that I hope will
+                continue for decades. Every certification, event, experience,
+                and achievement included here represents another step forward.
+            </p>
+
+            <p>
+                As I continue learning and progressing, this portfolio will grow
+                alongside me.
+            </p>
+
+        </div>
+
+    </article>
+
+
+
+    <section class="about-closing">
+
+        <p>
+            If there is one idea I hope visitors remember after leaving this
+            page, it is not simply that I want to become a pilot.
+        </p>
+
+        <h2>
+            I hope they remember someone who is genuinely curious, committed to
+            continuous improvement, willing to put in the work, and determined
+            to earn every opportunity.
+        </h2>
+
+        <div class="closing-line"></div>
+
+        <p class="closing-quote">
+            Becoming a pilot is not the destination. It is the responsibility
+            that I am working every day to become worthy of.
+        </p>
+
+    </section>
+
+</section>
+
+
+<section class="cards">
+
+
+<div class="card">
+
+    <h2>
+        Who I Am
+        </h2>
+        
+        <p>
+        An aspiring commercial pilot driven by curiosity, discipline, and a commitment to continuous learning. I enjoy understanding complex systems, solving problems, and continually developing both my technical knowledge and personal character.
+        </p>
+
+</div>
+
+
+
+<div class="card">
+
+    <h2>
+        Interests
+        </h2>
+        
+        <p>
+        Commercial Aviation • Aircraft Systems • Flight Operations • Airport Operations • Aviation Safety • Leadership • Travel • Continuous Learning
+        </p>
+
+</div>
+
+
+
+<div class="card">
+
+    <h2>
+        Values
+        </h2>
+        
+        <p>
+        Integrity • Discipline • Professionalism • Curiosity • Excellence • Lifelong Learning
+        </p>
+
+</div>
+
+
+</section>
+
+<div class="command-palette">
+
+    <div class="command-box">
+
+        <input
+            type="text"
+            id="commandInput"
+            placeholder="Search pages... (Ctrl + K)"
+            autocomplete="off"
+        >
+
+        <div class="command-results">
+
+            <a href="index.html">🏠 Home</a>
+            <a href="about.html">👤 About Me</a>
+            <a href="timeline.html">🛫 Journey</a>
+            <a href="skills.html">💡 Skills</a>
+            <a href="certifications.html">🏆 Certifications</a>
+            <a href="contact.html">✉️ Contact</a>
+
+        </div>
+
+    </div>
+
+</div>
+
+<button
+    class="back-to-top progress-return"
+    type="button"
+    aria-label="Back to top — 0% through page"
+    data-progress-return
+>
+    <svg
+        class="progress-return__ring"
+        viewBox="0 0 48 48"
+        aria-hidden="true"
+    >
+        <circle
+            class="progress-return__track"
+            cx="24"
+            cy="24"
+            r="21"
+        ></circle>
+
+        <circle
+            class="progress-return__value"
+            cx="24"
+            cy="24"
+            r="21"
+        ></circle>
+    </svg>
+
+    <span class="progress-return__arrow" aria-hidden="true">
+        ↑
+    </span>
+
+    <span class="progress-return__percentage" aria-hidden="true">
+        0%
+    </span>
+</button>
+
+<script src="js/script.js"></script>
+<script src="js/about.js"></script>
+<script src="js/scroll-return.js"></script>
+
+<!-- =========================================
+     PROFESSIONAL SITE FOOTER
+========================================== -->
+<footer class="site-footer">
+
+    <div class="site-footer-inner">
+
+        <!-- PRIMARY FOOTER INFORMATION -->
+
+        <div class="site-footer-main">
+
+            <div class="site-footer-brand">
+
+                <a
+                    href="index.html"
+                    class="site-footer-identity"
+                    aria-label="Muhammad Subhan homepage"
+                >
+
+                    <span class="site-footer-monogram">
+                        MS
+                    </span>
+
+
+                    <span>
+
+                        <strong>
+                            Muhammad Subhan
+                        </strong>
+
+                        <small>
+                            Personal Portfolio
+                        </small>
+
+                    </span>
+
+                </a>
+
+
+                <p>
+                    An aspiring commercial pilot documenting an
+                    evolving journey through education, aviation,
+                    technology and continuous development.
+                </p>
+
+
+                <div class="site-footer-location">
+
+                    <span aria-hidden="true"></span>
+
+                    Based in Riyadh, Saudi Arabia
+
+                </div>
+
+            </div>
+
+
+            <!-- FOOTER NAVIGATION -->
+
+            <nav
+                class="site-footer-navigation"
+                aria-label="Footer navigation"
+            >
+
+                <div>
+
+                    <p>
+                        EXPLORE
+                    </p>
+
+                    <a href="about.html">
+                        About Me
+                    </a>
+
+                    <a href="timeline.html">
+                        Journey
+                    </a>
+
+                    <a href="skills.html">
+                        Skills
+                    </a>
+
+                </div>
+
+
+                <div>
+
+                    <p>
+                        EVIDENCE
+                    </p>
+
+                    <a href="certification.html">
+                        Certifications
+                    </a>
+
+                    <a href="certification.html#experiences">
+                        Experiences
+                    </a>
+
+                    <a href="contact.html">
+                        Contact
+                    </a>
+
+                </div>
+
+
+                <div>
+
+                    <p>
+                        CONNECT
+                    </p>
+
+                    <a href="mailto:subhan.ahmadbaqa@gmail.com">
+                        Email
+                    </a>
+
+                    <a
+                        href="https://www.linkedin.com/in/ms910"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        LinkedIn
+
+                        <span aria-hidden="true">
+                            ↗
+                        </span>
+
+                    </a>
+
+                </div>
+
+            </nav>
+
+
+            <!-- CURRENT STATUS -->
+
+            <aside
+                class="site-footer-status"
+                aria-label="Current portfolio status"
+            >
+
+                <div class="site-footer-status-heading">
+
+                    <span aria-hidden="true"></span>
+
+                    CURRENTLY PROGRESSING
+
+                </div>
+
+
+                <h2>
+                    Preparing for the next academic stage
+                </h2>
+
+
+                <p>
+                    IGCSE examinations completed. The next checkpoint
+                    is Grade 11, with a long-term direction toward
+                    professional aviation.
+                </p>
+
+
+                <dl>
+
+                    <div>
+
+                        <dt>
+                            Current stage
+                        </dt>
+
+                        <dd>
+                            IGCSE Complete
+                        </dd>
+
+                    </div>
+
+
+                    <div>
+
+                        <dt>
+                            Next checkpoint
+                        </dt>
+
+                        <dd>
+                            Grade 11
+                        </dd>
+
+                    </div>
+
+
+                    <div>
+
+                        <dt>
+                            Direction
+                        </dt>
+
+                        <dd>
+                            Commercial Aviation
+                        </dd>
+
+                    </div>
+
+                </dl>
+
+            </aside>
+
+        </div>
+
+
+        <!-- CONTACT HANDOFF -->
+
+        <div class="site-footer-handoff">
+
+            <div>
+
+                <p>
+                    RELEVANT OPPORTUNITY OR CONVERSATION?
+                </p>
+
+                <h2>
+                    Let’s start with the right context.
+                </h2>
+
+            </div>
+
+
+            <a href="contact.html">
+
+                <span>
+                    Prepare a message
+                </span>
+
+                <span aria-hidden="true">
+                    →
+                </span>
+
+            </a>
+
+        </div>
+
+
+        <!-- LEGAL / META ROW -->
+
+        <div class="site-footer-bottom">
+
+            <p>
+                © 2026 Muhammad Subhan
+            </p>
+
+
+            <p>
+                Designed and built as an evolving personal portfolio
+            </p>
+
+
+            <p>
+
+                <span aria-hidden="true"></span>
+
+                Last reviewed July 2026
+
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+<!-- Connection Status Indicator -->
+<div
+    class="connection-status"
+    id="connectionStatus"
+    role="status"
+    aria-live="polite"
+    aria-hidden="true"
+>
+    <span
+        class="connection-status__dot"
+        aria-hidden="true"
+    ></span>
+
+    <span id="connectionStatusText">
+        Connection lost
+    </span>
+</div>
+
+</body>
+
+</html>
