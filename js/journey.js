@@ -1,186 +1,218 @@
 /* ==========================================================
-                    JOURNEY.JS
-                    PART 1
+                JOURNEY PHASE NAVIGATION
 ========================================================== */
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    const milestones = [...document.querySelectorAll(".milestone")];
-    
-    const timeline = document.querySelector(".timeline");
-    
-    const progressLine = document.getElementById("timelineProgress");
-    
-    const progressFill = document.getElementById("progressFill");
-    
-    const completedCount = document.getElementById("completedCount");
-    
-    const currentStage = document.getElementById("currentStage");
-    
-    const nextMilestone = document.getElementById("nextMilestone");
-    
-    const lastUpdated = document.getElementById("lastUpdated");
-    
-    
-    /* -----------------------------------
-        SETTINGS
-    ------------------------------------ */
-    
-    // Change ONLY these if your journey changes.
-    
-    const completed = 7;
-    
-    const current = 7;
-    
-    
-    // Progress card
-    
-    completedCount.textContent =
-    `${completed} / ${milestones.length}`;
-    
-    currentStage.textContent =
-    "IGCSE Graduate";
-    
-    nextMilestone.textContent =
-    "Grade 11";
-    
-    lastUpdated.textContent =
-    "July 2026";
-    
-    const percent =
-    (completed / milestones.length) * 100;
-    
-    requestAnimationFrame(() => {
-    
-    progressFill.style.width =
-    percent + "%";
-    
-    });
-    
-    
-    /* -----------------------------------
-        MARK PERMANENT STATES
-    ------------------------------------ */
-    
-    milestones.forEach((m,index)=>{
-    
-    if(index<completed){
-    
-    m.classList.add("completed");
-    
+    const phaseNavigation =
+        document.querySelector(
+            ".journey-phase-navigation"
+        );
+
+    const phaseLinks = [
+        ...document.querySelectorAll(
+            "[data-journey-phase]"
+        )
+    ];
+
+
+    if(
+        !phaseNavigation ||
+        !phaseLinks.length
+    ){
+        return;
     }
-    
-    else if(index===current){
-    
-    m.classList.add("current");
-    
+
+
+    const phaseSections =
+        phaseLinks
+            .map(link => {
+
+                const targetSelector =
+                    link.getAttribute("href");
+
+                const target =
+                    targetSelector
+                        ? document.querySelector(
+                            targetSelector
+                        )
+                        : null;
+
+
+                return target
+                    ? {
+                        link,
+                        target
+                    }
+                    : null;
+
+            })
+            .filter(Boolean);
+
+
+    if(!phaseSections.length){
+        return;
     }
-    
-    });
-    
-    
-    /* -----------------------------------
-    TIMELINE ANIMATION
------------------------------------- */
-
-function updateTimeline() {
-
-    const timelineRect = timeline.getBoundingClientRect();
-
-    const currentMilestone = milestones[current];
-    
-    const currentRect = currentMilestone.getBoundingClientRect();
-    
-    
-    const stopPoint =
-        (currentRect.top + currentRect.height / 2)
-        - timelineRect.top;
-    
-    
-    let progress =
-        (window.innerHeight * 0.70)
-        - timelineRect.top;
-    
-    
-    progress = Math.max(0, progress);
-    
-    progress = Math.min(progress, stopPoint);
-    
-    
-    progressLine.style.height =
-        progress + "px";
 
 
-    milestones.forEach((milestone, index) => {
-
-        const rect =
-            milestone.getBoundingClientRect();
-
-
-        if (
-            rect.top <
-            window.innerHeight * 0.72
-        ) {
-
-            milestone.classList.add("visible");
-
-        }
+    const reducedMotion =
+        window.matchMedia(
+            "(prefers-reduced-motion: reduce)"
+        );
 
 
-        if (index < completed) {
+    /* ======================================================
+                    SMOOTH PHASE JUMP
+    ====================================================== */
 
-            milestone.classList.add("completed");
+    phaseLinks.forEach(link => {
 
-        }
+        link.addEventListener("click", event => {
+
+            const targetSelector =
+                link.getAttribute("href");
+
+            const target =
+                targetSelector
+                    ? document.querySelector(
+                        targetSelector
+                    )
+                    : null;
 
 
-        if (index === current) {
+            if(!target){
+                return;
+            }
 
-            milestone.classList.add("current");
 
-        }
+            event.preventDefault();
+
+
+            target.scrollIntoView({
+
+                behavior:
+                    reducedMotion.matches
+                        ? "auto"
+                        : "smooth",
+
+                block:
+                    "center"
+
+            });
+
+        });
 
     });
 
-}
-/* -----------------------------------
-    START EVERYTHING
------------------------------------- */
 
-function animate() {
+    /* ======================================================
+                    ACTIVE PHASE DETECTION
+    ====================================================== */
 
-    updateTimeline();
+    function updateActivePhase(){
 
-    requestAnimationFrame(animate);
-
-}
+        const readingPosition =
+            window.innerHeight * 0.48;
 
 
-/* Initial update */
-
-updateTimeline();
-
-
-/* Start animation */
-
-requestAnimationFrame(animate);
+        let activePhase =
+            phaseSections[0];
 
 
-/* Update after resize */
+        phaseSections.forEach(phase => {
 
-window.addEventListener("resize", () => {
+            const phasePosition =
+                phase.target
+                    .getBoundingClientRect()
+                    .top;
 
-    updateTimeline();
 
-});
+            if(
+                phasePosition <=
+                readingPosition
+            ){
+
+                activePhase =
+                    phase;
+
+            }
+
+        });
 
 
-/* Refresh Lucide icons */
+        phaseLinks.forEach(link => {
 
-if (window.lucide) {
+            if(
+                link === activePhase.link
+            ){
 
-    lucide.createIcons();
+                link.setAttribute(
+                    "aria-current",
+                    "step"
+                );
 
-}
+            }else{
+
+                link.removeAttribute(
+                    "aria-current"
+                );
+
+            }
+
+        });
+
+    }
+
+
+    /* ======================================================
+                    PERFORMANCE-SAFE SCROLLING
+    ====================================================== */
+
+    let updateScheduled = false;
+
+
+    function schedulePhaseUpdate(){
+
+        if(updateScheduled){
+            return;
+        }
+
+
+        updateScheduled = true;
+
+
+        requestAnimationFrame(() => {
+
+            updateActivePhase();
+
+            updateScheduled = false;
+
+        });
+
+    }
+
+
+    window.addEventListener(
+        "scroll",
+        schedulePhaseUpdate,
+        {
+            passive: true
+        }
+    );
+
+
+    window.addEventListener(
+        "resize",
+        schedulePhaseUpdate
+    );
+
+
+    window.addEventListener(
+        "load",
+        schedulePhaseUpdate
+    );
+
+
+    updateActivePhase();
 
 });
